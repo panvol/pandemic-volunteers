@@ -101,7 +101,7 @@
 
         <%= f.input :city, collection: [], label: false, input_html: {hidden: true}, required: false %>
 
-        <%= f.input :name, label: false, required: false %>
+        <%= f.input :name, label: false, required: true, input_html: { required: true } %>
 
         <%= f.input :email, input_html: { autocomplete: 'email' }, label: false, required: false %>
 
