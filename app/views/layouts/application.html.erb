@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>😷 Pandemic Volunteers</title>
+    <title>Pandemic Volunteers</title>
+    <%= render 'application/favicon' %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -10,11 +11,15 @@
   </head>
 
   <body>
+
     <div class="d-flex w-100 h-100 mx-auto flex-column center-block">
       <header class="masthead mb-auto bg-light">
         <div class="cover-container m-auto">
         <div class="inner center-block">
-          <h3 class="nav masthead-brand justify-content-center py-3 ">😷 Pandemic Volunteers</h3>
+          <h3 class="nav masthead-brand justify-content-center py-3 ">
+            <%= inline_svg_tag "logo/logo.svg", size: '2rem', class: 'mr-2' %>
+            Pandemic Volunteers
+          </h3>
           <nav class="nav nav-masthead justify-content-center py-3">
             <a class="text-danger mx-3 nav-link active" href="#">Hospitals</a>
             <a class="text-danger mx-3 nav-link" href="#">Communities</a>
@@ -36,7 +41,7 @@
             <div class="row">
               <div class="col-md-8">
                 <div class="row my-2">
-                  <p class="w-100 m-auto text-muted mx-3">
+                  <p class="w-100 m-auto text-muted">
                     <small>
                       Pandemic Volunteers is an international humanitarian medical NGO in the works.
                     </small>

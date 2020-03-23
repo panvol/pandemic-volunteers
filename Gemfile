@@ -28,11 +28,11 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
-gem 'city-state', ">= 0.0.13"
-gem 'country_state_select', ">= 3.0.5"
-gem 'simple_form', ">= 5.0.2"
-gem 'bootstrap',  '~>4.3.1'
-# gem 'chosen-rails'
+gem 'city-state', '>= 0.0.13'
+gem 'country_state_select', '>= 3.0.5'
+gem 'simple_form', '>= 5.0.2'
+gem 'bootstrap', '~>4.3.1'
+gem 'inline_svg', '>= 1.7.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -46,6 +46,13 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Commented out due to a dependency conflict, only required for regenerating favicons
+  # In order to regenerate favicons, comment out city-state and enable rails_real_favicon
+  # Run `bundle install`
+  # Run `rails generate favicon`
+  # Revert the gems
+  # Run `bundle install`
+  # gem 'rails_real_favicon', '>= 0.1.0'
 end
 
 group :test do
