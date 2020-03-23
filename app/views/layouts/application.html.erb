@@ -5,11 +5,39 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+
+<body>
+  <div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
+    <header class="masthead p-3 mb-auto">
+      <div class="inner">
+        <h3 class="masthead-brand">😷 Pandemic Volunteers</h3>
+        <nav class="nav nav-masthead justify-content-center pt-1">
+          <a class="text-danger nav-link active" href="#">Hospitals</a>
+          <a class="text-danger nav-link" href="#">Communities</a>
+          <a class="text-danger nav-link" href="#">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main role="main" class="inner cover">
+
+      <%= yield %>
+
+    </main>
+
+    <footer class="mastfoot mt-auto pt-5">
+      <div class="inner">
+        <p>
+          Pandemic Volunteers is an international humanitarian medical non-governmental organisation (NGO) in the works.
+        </p>
+      </div>
+    </footer>
+  </div>
+
+</body>
+
 </html>

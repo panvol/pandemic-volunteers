@@ -1,0 +1,25 @@
+en:
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'Required'
+      mark: '*'
+    error_notification:
+      default_message: "Please review the problems below:"
+    labels:
+      defaults:
+        country: 'Country'
+        state: 'State'
+        city: 'City'
+        name: 'Full name'
+        email: 'Email address'
+        phone: 'Phone number'
+        immunity: 'Do you have immunity against SARS-CoV-2?'
+        about: 'About you'
+    placeholders:
+      defaults:
+        name: 'Full name'
+        email: 'Email address'
+        phone: 'Phone number'
+        about: 'Tell us a little about yourself and how could you help'

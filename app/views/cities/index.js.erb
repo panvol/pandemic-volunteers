@@ -1,0 +1,25 @@
+// Find the city select box
+var city = document.getElementById("abc_city");
+
+// Clear the options in the select box
+while (city_element.firstChild) city_element.removeChild(city_element.firstChild);
+
+if ( <%= @selected_state == "" || @cities.count == 0 %> ) {
+  city_element.value = "";
+  city_element.hidden = true;
+}
+
+if ( <%= @cities.count != 0 %> ) {
+  city_element.hidden = false;
+
+  // Add a placeholder
+  var placeholder = document.createElement("option");
+  placeholder.text = "Choose your city";
+  placeholder.value = "";
+  city_element.appendChild(placeholder);
+
+  // Add the states
+  <% @cities.each do |c| %>
+      city_element.options[city_element.options.length] = new Option('<%= c %>');
+  <% end %>
+}
