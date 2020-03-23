@@ -1,0 +1,13 @@
+<!-- Fix this later on. -->
+<!-- Unfornunately I wasn't able to add notie through webpack. -->
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/notie/dist/notie.min.css">  
+<script src="https://unpkg.com/notie"></script>
+<script type="text/javascript">
+  // notie.alert({ type: 'success', text: 'Success!', time: 2 }) // Hides after 2 seconds
+a</script>
+
+<%= content_tag(:script) do %>
+  <% flash.each do |type, message| %>
+    notie.alert({ type: '<%= notie_flash_class("#{type}") %>', text: '<%= message %>', time: 2})
+  <% end %>
+<% end %>
