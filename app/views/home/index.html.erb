@@ -94,7 +94,7 @@
       </div>
     </div>
     <div class="card-body bg-light">
-      <%= simple_form_for :abc, url: '/abc' do |f| %>
+      <%= simple_form_for @volunteer, url: volunteers_path, method: :post do |f| %>
         <%= f.input :country, collection: CS.countries.map { |c| [c[1], c[0]] }, prompt: "Choose your country", label: false, required: false %>
 
         <%= f.input :state, collection: [], label: false, input_html: {hidden: true}, required: false %>
