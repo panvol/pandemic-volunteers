@@ -1,44 +1,44 @@
-  <div class="text-center container py-5">
-    <p class="cover-heading">You can save <span class="lives">lives</span>. </p>
-    <p class="cover-lead">
-      Millions of volunteers are needed to help tackle the coronavirus pandemic with less deaths.
-    </p>
+<div class="text-center container py-5">
+  <p class="cover-heading">You can save <span class="lives">lives</span>. </p>
+  <p class="cover-lead">
+    Millions of volunteers are needed to help tackle the coronavirus pandemic with less deaths.
+  </p>
 
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="offset-md-2 col-md-8 px-0 py-5">
-        <div class="card border-bootstrap box-shadow">
-          <div class="card-header text-bootstrap d-flex align-items-center justify-content-between">
-            <div>
-              <strong>Apply for volunteering</strong>
-            </div>
-          </div>
-          <div class="card-body">
-            <%= simple_form_for :abc, url: '/abc' do |f| %>
-              <%= f.input :country, collection: CS.countries.map { |c| [c[1], c[0]] }, prompt: "Choose your country", label: false, required: false %>
-
-              <%= f.input :state, collection: [], label: false, input_html: {hidden: true}, required: false %>
-
-              <%= f.input :city, collection: [], label: false, input_html: {hidden: true}, required: false %>
-
-              <%= f.input :name, label: false, required: false %>
-
-              <%= f.input :email, input_html: { autocomplete: 'email' }, label: false, required: false %>
-
-              <%= f.input :phone, input_html: { autocomplete: 'tel' }, label: false, required: false %>
-
-              <%= f.input :immunity, as: :radio_buttons, checked: 1, required: false %>
-
-              <%= f.input :about, as: :text, required: false %>
-
-              <%= f.button :submit, "Apply", class: "btn-danger" %>
-            <% end %>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="offset-md-2 col-md-8 px-0 py-5">
+      <div class="card border-danger box-shadow">
+        <div class="card-header d-flex align-items-center justify-content-between">
+          <div>
+            <strong>Apply for volunteering</strong>
           </div>
         </div>
-      </div>  
-    </div>
+        <div class="card-body bg-light">
+          <%= simple_form_for :abc, url: '/abc' do |f| %>
+            <%= f.input :country, collection: CS.countries.map { |c| [c[1], c[0]] }, prompt: "Choose your country", label: false, required: false %>
+
+            <%= f.input :state, collection: [], label: false, input_html: {hidden: true}, required: false %>
+
+            <%= f.input :city, collection: [], label: false, input_html: {hidden: true}, required: false %>
+
+            <%= f.input :name, label: false, required: false %>
+
+            <%= f.input :email, input_html: { autocomplete: 'email' }, label: false, required: false %>
+
+            <%= f.input :phone, input_html: { autocomplete: 'tel' }, label: false, required: false %>
+
+            <%= f.input :immunity, as: :radio_buttons, checked: 1, required: false %>
+
+            <%= f.input :about, as: :text, required: false %>
+
+            <%= f.button :submit, "Apply", class: "btn-danger font-weight-bold" %>
+          <% end %>
+        </div>
+      </div>
+    </div>  
   </div>
+</div>
 
 <%= javascript_pack_tag 'location_selector', 'data-turbolinks-track': 'reload' %>
 <%= stylesheet_link_tag "theme" %>

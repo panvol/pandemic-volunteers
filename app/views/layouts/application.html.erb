@@ -4,40 +4,61 @@
     <title>Pandemicresponse</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <body>
+    <div class="d-flex w-100 h-100 mx-auto flex-column center-block">
+      <header class="masthead px-3 mb-auto bg-light">
+        <div class="cover-container m-auto">
+        <div class="inner center-block">
+          <h3 class="nav masthead-brand justify-content-center py-3 ">😷 Pandemic Volunteers</h3>
+          <nav class="nav nav-masthead justify-content-center py-3">
+            <a class="text-danger nav-link active" href="#">Hospitals</a>
+            <a class="text-danger nav-link" href="#">Communities</a>
+            <a class="text-danger nav-link" href="#">Contact</a>
+          </nav>
+        </div>
+        </div>
+      </header>
 
-<body>
-  <div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
-    <header class="masthead p-3 mb-auto">
-      <div class="inner">
-        <h3 class="masthead-brand">😷 Pandemic Volunteers</h3>
-        <nav class="nav nav-masthead justify-content-center pt-1">
-          <a class="text-danger nav-link active" href="#">Hospitals</a>
-          <a class="text-danger nav-link" href="#">Communities</a>
-          <a class="text-danger nav-link" href="#">Contact</a>
-        </nav>
-      </div>
-    </header>
+      <main role="main" class="inner cover">
+        <div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
+          <%= yield %>
+        </div>
+      </main>
 
-    <main role="main" class="inner cover">
-
-      <%= yield %>
-
-    </main>
-
-    <footer class="mastfoot mt-auto pt-5">
-      <div class="inner">
-        <p>
-          Pandemic Volunteers is an international humanitarian medical non-governmental organisation (NGO) in the works.
-        </p>
-      </div>
-    </footer>
-  </div>
-
-</body>
+      <footer class="mastfoot mt-auto pt-4 px-3 bg-light">
+        <div class="inner">
+          <div class="text-center cover-container m-auto">
+            <div class="row">
+              <div class="col-8">
+                <div class="row h-100">
+                  <p class="text-muted">
+                    Pandemic Volunteers is an international humanitarian medical non-governmental organisation (NGO) in the works.
+                  </p>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="row h-100">
+                  <p class="m-1">
+                    Twitter
+                  </p>
+                  <p class="m-1">
+                    Instagram
+                  </p>
+                  <p class="m-1">
+                    Facebook
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
 
 </html>
