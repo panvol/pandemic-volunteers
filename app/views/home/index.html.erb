@@ -3,6 +3,9 @@
   <p class="cover-lead">
     Millions of volunteers are needed to help tackle the coronavirus pandemic with less deaths.
   </p>
+  <a role="button" class="btn btn-danger btn-lg mt-3 mb-5 shadow" href="#apply">
+    Volunteer
+  </a>
 </div>
 
 <div class="row my-4 mx-0">
@@ -76,7 +79,7 @@
 </div>
 
 <div class="offset-md-2 col-md-8 px-0 py-5">
-  <div class="card border-danger box-shadow">
+  <div id="apply" class="card border-danger shadow">
     <div class="card-header d-flex align-items-center justify-content-between">
       <div>
         <strong>Apply for volunteering</strong>
@@ -100,7 +103,7 @@
 
         <%= f.input :about, as: :text, required: false %>
 
-        <%= f.button :submit, "Apply", class: "btn-danger font-weight-bold" %>
+        <%= f.button :submit, "Apply", class: "btn-danger font-weight-bold shadow" %>
       <% end %>
     </div>
   </div>

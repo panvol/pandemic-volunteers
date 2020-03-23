@@ -20,6 +20,10 @@ a:hover {
  * Base structure
  */
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   /*height: 100%;*/
@@ -96,7 +100,7 @@ body {
 }
 
 .lives {
-  border-bottom: 5px solid rgb(244, 67, 54); box-shadow: rgb(244, 67, 54) 0px -22px 0px inset;
+  border-bottom: 5px solid rgb(220, 53, 69); box-shadow: rgb(220, 53, 69) 0px -22px 0px inset;
 }
 
 .cover-lead {
