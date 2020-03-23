@@ -3,42 +3,108 @@
   <p class="cover-lead">
     Millions of volunteers are needed to help tackle the coronavirus pandemic with less deaths.
   </p>
-
 </div>
-<div class="container">
-  <div class="row">
-    <div class="offset-md-2 col-md-8 px-0 py-5">
-      <div class="card border-danger box-shadow">
-        <div class="card-header d-flex align-items-center justify-content-between">
-          <div>
-            <strong>Apply for volunteering</strong>
-          </div>
-        </div>
-        <div class="card-body bg-light">
-          <%= simple_form_for :abc, url: '/abc' do |f| %>
-            <%= f.input :country, collection: CS.countries.map { |c| [c[1], c[0]] }, prompt: "Choose your country", label: false, required: false %>
 
-            <%= f.input :state, collection: [], label: false, input_html: {hidden: true}, required: false %>
-
-            <%= f.input :city, collection: [], label: false, input_html: {hidden: true}, required: false %>
-
-            <%= f.input :name, label: false, required: false %>
-
-            <%= f.input :email, input_html: { autocomplete: 'email' }, label: false, required: false %>
-
-            <%= f.input :phone, input_html: { autocomplete: 'tel' }, label: false, required: false %>
-
-            <%= f.input :immunity, as: :radio_buttons, checked: 1, required: false %>
-
-            <%= f.input :about, as: :text, required: false %>
-
-            <%= f.button :submit, "Apply", class: "btn-danger font-weight-bold" %>
-          <% end %>
-        </div>
-      </div>
-    </div>  
+<div class="row my-4 mx-0">
+  <div class="col-md-2 d-flex text-center justify-content-center">
+    <i class="fas fa-hands-helping fa-5x m-auto"></i>
+  </div>
+  <div class="col-md-10">
+    <p class="cover-lead font-weight-bold">
+      Help nurses in hospitals <span class="ml-2 badge badge-secondary">requires immunity</span>
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
   </div>
 </div>
+
+<div class="row my-4 mx-0">
+  <div class="col-md-2 d-flex text-center justify-content-center">
+    <i class="fas fa-stethoscope fa-5x m-auto"></i>
+  </div>
+  <div class="col-md-10">
+    <p class="cover-lead font-weight-bold">
+      Visit patients in home isolation <span class="ml-2 badge badge-secondary">requires immunity</span>
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+  </div>
+</div>
+
+<div class="row my-4 mx-0">
+  <div class="col-md-2 d-flex text-center justify-content-center">
+    <i class="fas fa-shopping-basket fa-5x m-auto"></i>
+  </div>
+  <div class="col-md-10">
+    <p class="cover-lead font-weight-bold">
+      Cater to the needs of the elderly
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+  </div>
+</div>
+
+<div class="row my-4 mx-0">
+  <div class="col-md-2 d-flex text-center justify-content-center">
+    <i class="fas fa-baby fa-5x m-auto"></i>
+  </div>
+  <div class="col-md-10">
+    <p class="cover-lead font-weight-bold">
+      Give care to dependents of healthcare workers
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+  </div>
+</div>
+
+<div class="row my-4 mx-0">
+  <div class="col-md-2 d-flex text-center justify-content-center">
+    <i class="fas fa-vial fa-5x m-auto"></i>
+  </div>
+  <div class="col-md-10">
+    <p class="cover-lead font-weight-bold">
+      Curate academic research for busy doctors
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+  </div>
+</div>
+
+<div class="offset-md-2 col-md-8 px-0 py-5">
+  <div class="card border-danger box-shadow">
+    <div class="card-header d-flex align-items-center justify-content-between">
+      <div>
+        <strong>Apply for volunteering</strong>
+      </div>
+    </div>
+    <div class="card-body bg-light">
+      <%= simple_form_for :abc, url: '/abc' do |f| %>
+        <%= f.input :country, collection: CS.countries.map { |c| [c[1], c[0]] }, prompt: "Choose your country", label: false, required: false %>
+
+        <%= f.input :state, collection: [], label: false, input_html: {hidden: true}, required: false %>
+
+        <%= f.input :city, collection: [], label: false, input_html: {hidden: true}, required: false %>
+
+        <%= f.input :name, label: false, required: false %>
+
+        <%= f.input :email, input_html: { autocomplete: 'email' }, label: false, required: false %>
+
+        <%= f.input :phone, input_html: { autocomplete: 'tel' }, label: false, required: false %>
+
+        <%= f.input :immunity, as: :radio_buttons, checked: 1, required: false %>
+
+        <%= f.input :about, as: :text, required: false %>
+
+        <%= f.button :submit, "Apply", class: "btn-danger font-weight-bold" %>
+      <% end %>
+    </div>
+  </div>
+</div>  
 
 <%= javascript_pack_tag 'location_selector', 'data-turbolinks-track': 'reload' %>
 <%= stylesheet_link_tag "theme" %>

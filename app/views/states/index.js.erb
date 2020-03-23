@@ -7,11 +7,12 @@ var city_element = document.getElementById("abc_city");
 // Clear the options in the select box
 while (state_element.firstChild) state_element.removeChild(state_element.firstChild);
 
+city_element.value = "";
+city_element.hidden = true;
+
 if ( <%= @selected_country == "" || @states.count == 0 %> ) {
   state_element.value = "";
   state_element.hidden = true;
-  city_element.value = "";
-  city_element.hidden = true;
 }
 
 if ( <%= @states.count != 0 %> ) {
