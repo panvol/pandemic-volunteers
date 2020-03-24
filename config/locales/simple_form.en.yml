@@ -3,8 +3,12 @@ en:
     "yes": 'Yes'
     "no": 'No'
     required:
-      text: 'Required'
+      text: 'required'
       mark: '*'
+      # This will overwrite required text and mark for all simple forms.
+      # When using html, text and mark won't be used.
+      # Comment out the line below to return to default settings.
+      html: ''
     error_notification:
       default_message: "Please review the problems below:"
     labels:
@@ -22,4 +26,4 @@ en:
         name: 'Full name'
         email: 'Email address'
         phone: 'Phone number'
-        about: 'Tell us a little about yourself and how could you help'
+        about: 'How could you help?'

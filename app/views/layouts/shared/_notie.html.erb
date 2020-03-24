@@ -5,6 +5,6 @@
 
 <%= content_tag(:script) do %>
   <% flash.each do |type, message| %>
-    notie.alert({ type: '<%= notie_flash_class("#{type}") %>', text: '<%= message %>', time: 2})
+    notie.alert({ type: '<%= notie_flash_class("#{type}") %>', text: '<%= message.html_safe %>', time: 5})
   <% end %>
 <% end %>

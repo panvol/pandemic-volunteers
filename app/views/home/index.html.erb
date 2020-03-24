@@ -56,22 +56,6 @@
 
 <div class="row my-4 mx-0">
   <div class="col-md-2 d-flex text-center justify-content-center">
-    <i class="fas fa-vial fa-3x m-auto" style="color: #6c757d;"></i>
-  </div>
-  <div class="col-md-10">
-    <p class="cover-lead font-weight-bold">
-      <span class="mr-2 align-middle">
-        Curate academic research for busy doctors
-      </span>
-    </p>
-    <p>
-      There are around 140 studies published about Covid-19 everyday. Reviewing these studies are crucial in determining the best treatments. However, the medical doctors in the field are not even able to sleep at their homes. Join our international research team to distill the most recent literature and provide scientificly-proven actionable guidelines for doctors around the world.
-    </p>
-  </div>
-</div>
-
-<div class="row my-4 mx-0">
-  <div class="col-md-2 d-flex text-center justify-content-center">
     <i class="fas fa-shopping-basket fa-3x m-auto" style="color: #6c757d;"></i>
   </div>
   <div class="col-md-10">
@@ -86,6 +70,22 @@
   </div>
 </div>
 
+<div class="row my-4 mx-0">
+  <div class="col-md-2 d-flex text-center justify-content-center">
+    <i class="fas fa-viruses fa-3x m-auto" style="color: #6c757d;"></i>
+  </div>
+  <div class="col-md-10">
+    <p class="cover-lead font-weight-bold">
+      <span class="mr-2 align-middle">
+        Curate academic research for busy doctors
+      </span>
+    </p>
+    <p>
+      There are around 140 studies published about Covid-19 everyday. Reviewing these studies are crucial in determining the best treatments. However, the medical doctors in the field are not even able to sleep at their homes. Join our international research team to distill the most recent literature and provide scientificly-proven actionable guidelines for doctors around the world.
+    </p>
+  </div>
+</div>
+
 <div class="offset-md-2 col-md-8 px-0 py-5">
   <div id="apply" class="card shadow">
     <div class="card-header d-flex align-items-center justify-content-between pb-0">
@@ -94,24 +94,25 @@
       </div>
     </div>
     <div class="card-body bg-light">
-      <%= simple_form_for @volunteer, url: volunteers_path, method: :post do |f| %>
-        <%= f.input :country, collection: CS.countries.map { |c| [c[1], c[0]] }, prompt: "Choose your country", label: false, required: false %>
+      <!-- /#apply is used to retain form errors and scroll to the form in case of errors -->
+      <%= simple_form_for @volunteer, url: '/#apply', method: :post do |f| %>
+        <%= f.input :country, collection: CS.countries.map { |c| [c[1], c[0]] }, prompt: "Choose your country", label: false %>
 
-        <%= f.input :state, collection: [], label: false, input_html: {hidden: true}, required: false %>
+        <%= f.input :state, label: false, collection: [], input_html: {hidden: true} %>
 
-        <%= f.input :city, collection: [], label: false, input_html: {hidden: true}, required: false %>
+        <%= f.input :city, label: false, collection: [], input_html: {hidden: true} %>
 
-        <%= f.input :name, label: false, required: true, input_html: { required: true } %>
+        <%= f.input :name, label: false, required: true, input_html: {oninvalid: "this.setCustomValidity('What is your name?')", oninput: "setCustomValidity('')"} %>
 
-        <%= f.input :email, input_html: { autocomplete: 'email' }, label: false, required: false %>
+        <%= f.input :email, label: false, input_html: { autocomplete: 'email' }, input_html: {minlength: 7, oninvalid: "this.setCustomValidity('What is your email address?')", oninput: "setCustomValidity('')"} %>
 
-        <%= f.input :phone, input_html: { autocomplete: 'tel' }, label: false, required: false %>
+        <%= f.input :phone, label: false, input_html: { autocomplete: 'tel' }, input_html: {minlength: 7, oninvalid: "setCustomValidity('What is your phone number?')", oninput: "setCustomValidity('')"} %>
 
-        <%= f.input :immunity, as: :radio_buttons, checked: 1, required: false %>
+        <%= f.input :about, label: false, as: :text, input_html: {minlength: 20, oninvalid: "setCustomValidity('How would you like to help?')", oninput: "setCustomValidity('')"} %>
 
-        <%= f.input :about, as: :text, required: false %>
+        <%= f.input :immunity, as: :radio_buttons, :collection => [ ['Yes', true], ['No', false] ], :checked => ['No', false] %>
 
-        <%= f.button :submit, "Apply for volunteering", class: "btn-danger btn-block btn-lg font-weight-bold shadow" %>
+        <%= f.button :submit, "Apply for volunteering", id: 'volunteer_submit', class: "btn-danger btn-block btn-lg font-weight-bold shadow" %>
       <% end %>
     </div>
   </div>

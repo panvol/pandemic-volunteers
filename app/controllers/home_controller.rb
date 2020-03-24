@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
   def index
-    @volunteer = Volunteer.new
+    if !@volunteer
+      @volunteer = Volunteer.new()
+    end
   end
 end
