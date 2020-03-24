@@ -11,13 +11,12 @@
   </head>
 
   <body>
-    <%= render 'layouts/shared/notie' %>
     <div class="d-flex w-100 h-100 mx-auto flex-column center-block">
       <header class="masthead mb-auto bg-light">
         <div class="cover-container m-auto">
         <div class="inner center-block">
           <h3 class="nav masthead-brand justify-content-center py-3 ">
-            <%= inline_svg_tag "logo/logo.svg", size: '2rem', class: 'mr-2' %>
+            <%= inline_svg_tag "logo/logo.svg", size: '2em', class: 'mr-2' %>
             Pandemic Volunteers
           </h3>
           <nav class="nav nav-masthead justify-content-center py-3">
@@ -77,6 +76,6 @@
         </div>
       </footer>
     </div>
+    <%= render 'layouts/shared/notie' %>
   </body>
-
 </html>
