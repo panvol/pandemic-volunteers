@@ -1,7 +1,6 @@
 <div align="center">
-	<img src="./app/assets/images/opengraph/image.png" style="object-fit: contain; margin: 25px;"/>
+    <img src="./app/assets/images/opengraph/image.png" style="object-fit: contain"/>
 </div>
-
 
 # ⚠️ Help Wanted
 
