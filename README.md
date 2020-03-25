@@ -105,3 +105,10 @@ $ rails db:migrate
 ```
 
 Visit http://localhost:3000
+
+
+## Deployment
+
+### Environment Variables
+
+ * `DOMAIN`: `pandemicvolunteers.org` (Required for Open Graph Images paths)
