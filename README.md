@@ -1,4 +1,4 @@
-<div align="center" style="object-fit: contain;">
+<div align="center">
 	<img src="./app/assets/images/opengraph/image.png"  style="object-fit: contain;"/>
 </div>
 
