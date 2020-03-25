@@ -1,11 +1,11 @@
-<div align="center">
-	<img src="./app/assets/images/opengraph/image.png"  style="object-fit: contain;"/>
+<div align="center" style="object-fit: contain;">
+	<img src="./app/assets/images/opengraph/image.png"/>
 </div>
 
 
 # ⚠️ Help Wanted
 
-Please help building and managing Pandemic Volunteers.
+Please help building and managing [Pandemic Volunteers](https://pandemicvolunteers.org).
 
 Ruby on Rails developers and staff to interview applicants are especially needed.
 
