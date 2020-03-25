@@ -1,24 +1,7 @@
-# README
+# You can save lives!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### ⚠️ Help Wanted
 
-Things you may want to cover:
+### https://pandemicvolunteers.org
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Help making Pandemic Volunteers a reality.
