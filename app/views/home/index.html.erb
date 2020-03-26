@@ -96,7 +96,7 @@
     <div class="card-body bg-light">
       <!-- /#apply is used to retain form errors and scroll to the form in case of errors -->
       <%= simple_form_for @volunteer, url: '/#apply', method: :post do |f| %>
-        <%= f.input :country, collection: CS.countries.map { |c| [c[1], c[0]] }, prompt: "Choose your country", label: false %>
+        <%= f.input :country, collection: @countries_collection, prompt: "Choose your country", label: false %>
 
         <%= f.input :state, label: false, collection: [], input_html: {hidden: true} %>
 
