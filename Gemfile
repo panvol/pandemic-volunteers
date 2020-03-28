@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+git_source(:github) { |repo| 'https://github.com/#{repo}.git' }
 
 ruby '2.7.0'
 
@@ -56,8 +56,12 @@ group :development do
 end
 
 group :test do
-  # Adds support for Capybara system testing and selenium driver
+  gem 'byebug', platform: :mri
   gem 'capybara', '>= 2.15'
+  gem 'factory_bot_rails'
+  gem 'pry-byebug'
+  gem 'pry-rails'
+  gem 'rspec-rails'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
