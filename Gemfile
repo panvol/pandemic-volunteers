@@ -59,6 +59,7 @@ group :test do
   gem 'byebug', platform: :mri
   gem 'capybara', '>= 2.15'
   gem 'factory_bot_rails'
+  gem 'faker'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec-rails'
