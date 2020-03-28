@@ -1,32 +1,45 @@
 // Find the state select box
-var state_element = document.getElementById("volunteer_state");
+var volunteer_state_element = document.getElementById("volunteer_state");
+let hospital_state_element = document.getElementById('hospital_state');
 
 // Find the city select box
-var city_element = document.getElementById("volunteer_city");
+var volunteer_city_element = document.getElementById("volunteer_city");
+let hospital_city_element = document.getElementById('hospital_city');
 
-// Clear the options in the select box
-while (state_element.firstChild) state_element.removeChild(state_element.firstChild);
+const updateState = (state_element, city_element) => {
+  // Clear the options in the select box
+  while (state_element.firstChild) state_element.removeChild(state_element.firstChild);
 
-city_element.value = "";
-city_element.hidden = true;
+  city_element.value = "";
+  city_element.hidden = true;
 
-if ( <%= @selected_country == "" || @states.count == 0 %> ) {
-  state_element.value = "";
-  state_element.hidden = true;
-}
+  if ( <%= @selected_country == "" || @states.count == 0 %> ) {
+    state_element.value = "";
+    state_element.hidden = true;
+  }
 
-if ( <%= @states.count != 0 %> ) {
-  state_element.hidden = false;
+  if ( <%= @states.count != 0 %> ) {
+    state_element.hidden = false;
 
-  // Add a placeholder
-  var placeholder = document.createElement("option");
-  placeholder.text = "Choose your state";
-  placeholder.value = "";
-  placeholder.placeholder = true;
-  state_element.appendChild(placeholder);
+    // Add a placeholder
+    var placeholder = document.createElement("option");
+    placeholder.text = "Choose your state";
+    placeholder.value = "";
+    placeholder.placeholder = true;
+    state_element.appendChild(placeholder);
 
-  // Add the states
-  <% @states.each do |s| %>
+    // Add the states
+    <% @states.each do |s| %>
     state_element.options[state_element.options.length] = new Option('<%= s[1] %>', '<%= s[0] %>')
-  <% end %>
+    <% end %>
+  }
 }
+
+[[volunteer_state_element, volunteer_city_element], [hospital_state_element, hospital_city_element]].forEach((pair) => {
+  let state_element = pair[0];
+  let city_element = pair[1];
+
+  if(state_element && city_element) {
+    updateState(pair[0], pair[1]);
+  }
+});

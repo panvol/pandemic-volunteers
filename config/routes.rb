@@ -5,4 +5,11 @@ Rails.application.routes.draw do
 
   resources :cities, only: :index
   resources :states, only: :index
+
+  namespace :api do
+    post '/hospital', to: 'hospitals#create'
+    post '/hospital_staff', to: 'hospital_staffs#create'
+  end
+
+  get '/hospitals', to: 'hospitals#index'
 end

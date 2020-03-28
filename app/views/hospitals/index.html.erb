@@ -1,0 +1,21 @@
+<div class="offset-md-2 col-md-8 px-0 py-5">
+  <div id="hospital-submit" class="card shadow">
+    <div class="card-header d-flex align-items-center justify-content-between pb-0">
+      <div class="cover-lead font-weight-bold">
+        <p>Register Your Hospital</p>
+      </div>
+    </div>
+    <div class="card-body bg-light">
+      <%= simple_form_for :hospital, url: '/api/hospitals', method: :post do |f| %>
+        <%= f.input :country, collection: @countries_collection, prompt: "Choose your country", label: false %>
+
+        <%= f.input :state, label: false, collection: [], input_html: { hidden: true } %>
+
+        <%= f.input :city, label: false, collection: [], input_html: { hidden: true } %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%= javascript_pack_tag 'location_selector', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag "theme" %>
