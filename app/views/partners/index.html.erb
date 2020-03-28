@@ -1,0 +1,53 @@
+<div class="text-center container py-5">
+  <p class="cover-heading">Partners provide opportunities for volunteers.</p>
+  <p class="cover-lead">
+    We connect your orginzation with our network of volunteers.
+  </p>
+  <a role="button" class="btn btn-danger btn-lg px-4 mt-3 mb-5 shadow" href="#apply">
+    Register
+  </a>
+</div>
+
+<div class="row my-4 mx-0">
+  <div class="col-md-2 d-flex text-center justify-content-center">
+    <i class="fas fa-hands-helping fa-3x text-muted m-auto"></i>
+  </div>
+  <div class="col-md-10">
+    <p class="cover-lead font-weight-bold">
+      <span class="mr-2 align-middle">Help nurses in hospitals</span>
+      <span style="font-size: 10pt" class="badge badge-secondary text-uppercase align-middle">requires immunity</span>
+    </p>
+    <p>
+      Nurses and other hospital staff work 24/7 for months during pandemics. This unsustainable work demand decreases the quality of medical care and costs lives. Join a group of volunteers at your local hospital to help medical staff. Ease the lives of the heroes of our time.
+    </p>
+  </div>
+</div>
+
+<div class="offset-md-2 col-md-8 px-0 py-5">
+  <div id="apply" class="card shadow">
+    <div class="card-header d-flex align-items-center justify-content-between pb-0">
+      <div class="cover-lead font-weight-bold">
+        <p>Apply to become a partner</p>
+      </div>
+    </div>
+    <div class="card-body bg-light">
+      <!-- /#apply is used to retain form errors and scroll to the form in case of errors -->
+      <%= simple_form_for @partner, url: '/#apply', method: :post do |f| %>
+        <%= f.input :country, collection: @countries_collection, prompt: "Choose your country", label: false %>
+
+        <%= f.input :state, label: false, collection: [], input_html: {hidden: true} %>
+
+        <%= f.input :city, label: false, collection: [], input_html: {hidden: true} %>
+
+        <%= f.input :name, label: false, required: true, input_html: {oninvalid: "this.setCustomValidity('What is your organization\'s name?')", oninput: "setCustomValidity('')"} %>
+
+        <%= f.input :about, label: false, as: :text, input_html: {minlength: 20, oninvalid: "setCustomValidity('What does your organization do?')", oninput: "setCustomValidity('')"} %>
+
+        <%= f.button :submit, "Apply for volunteering", id: 'volunteer_submit', class: "btn-danger btn-block btn-lg font-weight-bold shadow" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%= javascript_pack_tag 'location_selector', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag "theme" %>
