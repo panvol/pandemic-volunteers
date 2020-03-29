@@ -14,7 +14,7 @@
         <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
         <div class='form-group'>
           <label for='country' />
-          <select class='form-control select' id='hospital_country' name='country'>
+          <select class='form-control select hospital-required-field' id='hospital_country' name='country'>
             <option value='none' selected disabled hidden>Choose your country</option>
             <% @countries_collection.each do |country| %>
               <option value=<%= country[1] %>><%= country[0] %></option>
@@ -36,20 +36,20 @@
 
         <div class='form-group'>
           <label for='hospital_name' />
-          <input type='text' name='hospital_name' class='form-control string' placeholder='Hospital name' />
+          <input id='hospital-name-field' type='text' name='hospital_name' class='form-control string hospital-required-field' placeholder='Hospital name' />
         </div>
 
         <div class='form-group'>
           <label for='contact_name' />
-          <input type='text' name='contact_name' class='form-control string' placeholder='Contact name' />
+          <input id='hospital-contact-field' type='text' name='contact_name' class='form-control string hospital-required-field' placeholder='Contact name' />
         </div>
 
         <div class='form-group'>
           <label for='contact_email' />
-          <input type='text' name='contact_email' class='form-control string' placeholder='Contact email' />
+          <input id='hospital-email-field' type='text' name='contact_email' class='form-control string hospital-required-field' placeholder='Contact email' />
         </div>
 
-        <button class="btn btn-danger btn-block btn-lg font-weight-bold shadow" type='submit'>Register</button>
+        <button disabled='true' id='hospital-submit-button' class="btn btn-danger btn-block btn-lg font-weight-bold shadow" type='submit'>Register</button>
       </form>
 
     </div>
@@ -57,4 +57,5 @@
 </div>
 
 <%= javascript_pack_tag 'location_selector', 'data-turbolinks-track': 'reload' %>
+<%= javascript_pack_tag 'hospital_helper' %>
 <%= stylesheet_link_tag "theme" %>

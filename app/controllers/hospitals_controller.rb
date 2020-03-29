@@ -5,6 +5,8 @@ class HospitalsController < ApplicationController
     @countries_collection = @countries_collection.sort_by {|c| c[0]}
 
     @states_collection = []
+
+    @can_submit = false
     render template: 'hospitals/index'
   end
 end

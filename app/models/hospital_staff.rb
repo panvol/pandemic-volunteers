@@ -1,6 +1,6 @@
 class HospitalStaff < ApplicationRecord
   validates :name, :email, :hospital_id, presence: true
-  validates :email, format: /\b[A-Z0-9._%a-z\-]+@(?:[A-Z0-9a-z\-]+\.)+[A-Za-z]{2,4}\z/
+  validates :email, format: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}/
   validates :email, uniqueness: true
   validate :hospital_exists?
 
