@@ -5,6 +5,22 @@ require File.expand_path('../config/environment', __dir__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
+
+require "selenium/webdriver"
+Capybara.register_driver :chrome do |app|
+  Capybara::Selenium::Driver.new(app, browser: :chrome)
+end
+
+Capybara.register_driver :headless_chrome do |app|
+  options = Selenium::WebDriver::Chrome::Options.new
+  options.headless!
+
+  Capybara::Selenium::Driver.new app,
+                                 browser: :chrome,
+                                 options: options
+end
+
+Capybara.javascript_driver = :headless_chrome # change to :chrome to watch tests
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
