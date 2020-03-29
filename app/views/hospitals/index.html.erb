@@ -1,9 +1,13 @@
+<div>
+  <p>Is your hospital in need of volunteer assistance? Our volunteers can provide a <a href='/'>variety of services</a>. Sign up today and we'll connect you with volunteers in your area as soon as they're available.</p>
+</div>
 <div class="offset-md-2 col-md-8 px-0 py-5">
   <div id="hospital-submit" class="card shadow">
     <div class="card-header d-flex align-items-center justify-content-between pb-0">
       <div class="cover-lead font-weight-bold">
         <p>Register Your Hospital</p>
       </div>
+
     </div>
     <div class="card-body bg-light">
       <form accept-charset="UTF-8" action='/api/hospital' method='POST'>
@@ -11,6 +15,7 @@
         <div class='form-group'>
           <label for='country' />
           <select class='form-control select' id='hospital_country' name='country'>
+            <option value='none' selected disabled hidden>Choose your country</option>
             <% @countries_collection.each do |country| %>
               <option value=<%= country[1] %>><%= country[0] %></option>
             <% end %>

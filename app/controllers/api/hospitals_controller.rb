@@ -11,14 +11,14 @@ class Api::HospitalsController < ApplicationController
     begin
       hospital = create_hospital(hospital_name, country, state, city)
     rescue => e
-      flash.now = '<i class="fas fa-heart mr-1"></i> There was a problem registering.'
+      flash.alert = 'There was a problem registering.'
       redirect_to '/hospitals' and return
     end
 
     begin
       create_hospital_staff(contact_name, contact_email, hospital.id)
     rescue => e
-      flash.now = '<i class="fas fa-heart mr-1"></i> There was a problem registering.'
+      flash.alert = 'There was a problem registering.'
       redirect_to '/hospitals' and return
     end
 
@@ -27,7 +27,7 @@ class Api::HospitalsController < ApplicationController
   end
 
   def create_hospital(hospital_name, country, state, city)
-    hospital = Hospital.create!(
+    Hospital.create!(
       name: hospital_name,
       country: country,
       state: state,
