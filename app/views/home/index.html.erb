@@ -64,7 +64,7 @@
       </span>
     </p>
     <p>
-      Join our team and help us coordinate Pandemic Volunteers. Even a few hours a week can help us achieve our mission. Bring your expertise, or help us coordinate your local teams. However you think you can help, we can use it. 
+      Join our team and help us coordinate Pandemic Volunteers. Even a few hours a week can help us achieve our mission. Bring your expertise, or help us coordinate your local teams. However you think you can help, we can use it.
     </p>
   </div>
 </div>
@@ -154,28 +154,16 @@
     </div>
     <div class="card-body bg-light">
       <!-- /#apply is used to retain form errors and scroll to the form in case of errors -->
-      <%= simple_form_for @volunteer, url: '/#apply', method: :post do |f| %>
-        <%= f.input :country, collection: @countries_collection, prompt: "Choose your country", label: false %>
-
-        <%= f.input :state, label: false, collection: [], input_html: {hidden: true} %>
-
-        <%= f.input :city, label: false, collection: [], input_html: {hidden: true} %>
-
-        <%= f.input :name, label: false, required: true, input_html: {oninvalid: "this.setCustomValidity('What is your name?')", oninput: "setCustomValidity('')"} %>
-
-        <%= f.input :email, label: false, input_html: { autocomplete: 'email' }, input_html: {minlength: 7, oninvalid: "this.setCustomValidity('What is your email address?')", oninput: "setCustomValidity('')"} %>
-
-        <%= f.input :phone, label: false, input_html: { autocomplete: 'tel' }, input_html: {minlength: 7, oninvalid: "setCustomValidity('What is your phone number?')", oninput: "setCustomValidity('')"} %>
-
-        <%= f.input :about, label: false, as: :text, input_html: {minlength: 20, oninvalid: "setCustomValidity('How would you like to help?')", oninput: "setCustomValidity('')"} %>
-
-        <%= f.input :immunity, as: :radio_buttons, :collection => [ ['Yes', true], ['No', false] ], :checked => ['No', false] %>
-
-        <%= f.button :submit, "Apply", id: 'volunteer_submit', class: "btn-danger btn-block btn-lg font-weight-bold shadow" %>
-      <% end %>
+      <%= render partial: 'volunteers/form',
+                 locals: {
+                   volunteer: @volunteer,
+                   countries: @countries_collection,
+                   volunteer_support_units: @volunteer_support_units
+                 }
+      %>
     </div>
   </div>
-</div>  
+</div>
 
 <%= javascript_pack_tag 'location_selector', 'data-turbolinks-track': 'reload' %>
 <%= stylesheet_link_tag "theme" %>
