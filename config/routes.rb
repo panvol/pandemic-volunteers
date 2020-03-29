@@ -8,7 +8,6 @@ Rails.application.routes.draw do
 
   namespace :api do
     post '/hospital', to: 'hospitals#create'
-    post '/hospital_staff', to: 'hospital_staffs#create'
   end
 
   get '/hospitals', to: 'hospitals#index'
