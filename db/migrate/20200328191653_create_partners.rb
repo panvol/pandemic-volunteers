@@ -2,7 +2,7 @@ class CreatePartners < ActiveRecord::Migration[6.0]
   def change
     create_table :partners do |t|
       t.string :name
-      t.integer :type
+      t.integer :partner_type
       t.string :country
       t.string :state
       t.string :city
