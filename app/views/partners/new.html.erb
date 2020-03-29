@@ -3,9 +3,6 @@
   <p class="cover-lead">
     We connect your orginzation with our network of volunteers.
   </p>
-  <a role="button" class="btn btn-danger btn-lg px-4 mt-3 mb-5 shadow" href="#apply">
-    Register
-  </a>
 </div>
 
 <div class="offset-md-2 col-md-8 px-0 py-5">
@@ -24,7 +21,7 @@
 
         <%= f.input :about, label: false, as: :text, input_html: {minlength: 20, oninvalid: "setCustomValidity('What does your organization do?')", oninput: "setCustomValidity('')"} %>
 
-        <%= f.input :partner_type, collection: Partner.partner_types.to_a.collect{|option| [option[0], option[0]]}, include_blank: "Select an Organization Type" %>
+        <%= f.input :partner_type, label: false, collection: Partner.partner_types.to_a.collect{|option| [option[0], option[0]]}, prompt: "Choose your organization type" %>
 
         <%= simple_fields_for :partner_staff, partner_staff do |staff_fields| %>
           <%= staff_fields.input :name, label: false, required: true, input_html: {oninvalid: "this.setCustomValidity('What is your name?')", oninput: "setCustomValidity('')"} %>
