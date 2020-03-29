@@ -10,7 +10,7 @@ class CreatePartners < ActiveRecord::Migration[6.0]
       t.timestamps
     end
 
-    create_table :partner_staff do |t|
+    create_table :partner_staffs do |t|
       t.integer :partner_id
       t.string :name
       t.string :email
