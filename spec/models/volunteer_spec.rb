@@ -24,4 +24,31 @@ RSpec.describe Volunteer, type: :model do
     expect(volunteer.errors[:name][0]).to eq("can't be blank")
     expect(volunteer.errors[:about][0]).to eq("can't be blank")
   end
+
+  describe "Volunteer groups" do
+    it "has collection of groups" do
+      volunteer_groups = Volunteer.groups
+      groups = {
+        "hospital" => "help nurses in hospitals",
+        "triage" => "visit patients in home isolation",
+        "healthcare" => "give care to dependents of healthcare workers",
+        "elderly" => "cater to the needs of the elderly",
+        "research" => "curate academic research for busy doctors",
+        "operations" => "operations",
+        "other" => "other"
+      }
+
+      expect(volunteer_groups).equal?(groups)
+    end
+
+    it "has a support_unit attribute" do
+      volunteer =  FactoryBot.build(:volunteer)
+
+      begin
+        expect { volunteer.group }.not_to raise_error
+      rescue RSpec::Expectations::ExpectationNotMetError => e
+        expect(e.message).not_to include 'NoMethodError'
+      end
+    end
+  end
 end
