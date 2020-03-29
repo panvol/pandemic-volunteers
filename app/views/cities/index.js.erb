@@ -1,18 +1,27 @@
 // Find the city select box
 var volunteer_city = document.getElementById("volunteer_city");
 let hospital_city = document.getElementById('hospital_city');
+let hosp_city_container = document.getElementById('hospital-city-container');
 
-const updateCity = (city_element, city) => {
+const updateCity = (city_element, city, container) => {
   // Clear the options in the select box
   while (city_element.firstChild) city_element.removeChild(city_element.firstChild);
 
   if ( <%= @selected_state == "" || @cities.count == 0 %> ) {
     city_element.value = "";
     city_element.hidden = true;
+
+    if (container !== null) {
+      container.hidden = true;
+    }
   }
 
   if ( <%= @cities.count != 0 %> ) {
     city_element.hidden = false;
+
+    if (container !== null) {
+      container.hidden = false;
+    }
 
     // Add a placeholder
     var placeholder = document.createElement("option");
@@ -27,11 +36,12 @@ const updateCity = (city_element, city) => {
   }
 }
 
-[[volunteer_city_element, volunteer_city], [hospital_city_element, hospital_city]].forEach((pair) => {
+[[volunteer_city_element, volunteer_city, null], [hospital_city_element, hospital_city, hosp_city_container]].forEach((pair) => {
   let city_element = pair[0];
   let city = pair[1];
+  let container = pair[2];
 
   if (city_element && city) {
-    updateCity(pair[0], pair[1]);
+    updateCity(city_element, city, container);
   }
 })

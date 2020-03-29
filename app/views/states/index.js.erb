@@ -1,25 +1,37 @@
 // Find the state select box
 var volunteer_state_element = document.getElementById("volunteer_state");
 let hospital_state_element = document.getElementById('hospital_state');
+let hospital_state_container = document.getElementById('hospital-state-container');
 
 // Find the city select box
 var volunteer_city_element = document.getElementById("volunteer_city");
 let hospital_city_element = document.getElementById('hospital_city');
+let hospital_city_container = document.getElementById('hospital-city-container');
 
-const updateState = (state_element, city_element) => {
+const updateState = (state_element, city_element, state_container, city_container) => {
   // Clear the options in the select box
   while (state_element.firstChild) state_element.removeChild(state_element.firstChild);
 
   city_element.value = "";
   city_element.hidden = true;
+  if (city_container !== null) {
+    city_container.hidden = true;
+  }
 
   if ( <%= @selected_country == "" || @states.count == 0 %> ) {
     state_element.value = "";
     state_element.hidden = true;
+
+    if (state_container !== null) {
+      state_container.hidden = true;
+    }
   }
 
   if ( <%= @states.count != 0 %> ) {
     state_element.hidden = false;
+    if (state_container !== null) {
+      state_container.hidden = false;
+    }
 
     // Add a placeholder
     var placeholder = document.createElement("option");
@@ -35,11 +47,16 @@ const updateState = (state_element, city_element) => {
   }
 }
 
-[[volunteer_state_element, volunteer_city_element], [hospital_state_element, hospital_city_element]].forEach((pair) => {
-  let state_element = pair[0];
-  let city_element = pair[1];
+[
+  [volunteer_state_element, volunteer_city_element, null, null],
+  [hospital_state_element, hospital_city_element, hospital_state_container, hospital_city_container]
+].forEach((list) => {
+  let state_element = list[0];
+  let city_element = list[1];
+  let state_container = list[2];
+  let city_container = list[3];
 
   if(state_element && city_element) {
-    updateState(pair[0], pair[1]);
+    updateState(state_element, city_element, state_container, city_container);
   }
 });
