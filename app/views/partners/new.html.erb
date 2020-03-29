@@ -17,6 +17,10 @@
       <%= simple_form_for partner, method: :post do |f| %>
         <%= f.input :country, collection: @countries_collection, prompt: "Choose your country", label: false %>
 
+        <%= f.input :state, label: false, collection: [], input_html: {hidden: true} %>
+
+        <%= f.input :city, label: false, collection: [], input_html: {hidden: true} %>
+
         <%= f.input :name, label: false, required: true, input_html: {oninvalid: "this.setCustomValidity('What is your organization\'s name?')", oninput: "setCustomValidity('')"} %>
 
         <%= f.input :about, label: false, as: :text, input_html: {minlength: 20, oninvalid: "setCustomValidity('What does your organization do?')", oninput: "setCustomValidity('')"} %>

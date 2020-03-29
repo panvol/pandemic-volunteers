@@ -10,8 +10,6 @@ class PartnersController < ApplicationController
 
   def create
     partner = Partner.new(partner_params)
-    partner.city = "test"
-    partner.state = "MI"
     partner_staff = PartnerStaff.new(partner_staff_params)
     partner.partner_staff = [partner_staff]
 
