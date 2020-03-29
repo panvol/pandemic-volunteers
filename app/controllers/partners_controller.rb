@@ -10,7 +10,6 @@ class PartnersController < ApplicationController
 
   def create
     partner = Partner.new(partner_params)
-    partner.type = 0
     partner.city = "test"
     partner.state = "MI"
     partner_staff = PartnerStaff.new(partner_staff_params)
@@ -32,7 +31,7 @@ class PartnersController < ApplicationController
   private
 
   def partner_params
-    params.require(:partner).permit(:name, :type, :country, :state, :city, :about)
+    params.require(:partner).permit(:name, :partner_type, :country, :state, :city, :about)
   end
 
   def partner_staff_params

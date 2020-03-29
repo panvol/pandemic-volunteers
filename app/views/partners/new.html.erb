@@ -24,6 +24,8 @@
 
         <%= f.input :about, label: false, as: :text, input_html: {minlength: 20, oninvalid: "setCustomValidity('What does your organization do?')", oninput: "setCustomValidity('')"} %>
 
+        <%= f.input :partner_type, collection: Partner.partner_types.to_a.collect{|option| [option[0], option[0]]}, include_blank: "Select an Organization Type" %>
+
         <%= simple_fields_for :partner_staff, partner_staff do |staff_fields| %>
           <%= staff_fields.input :name, label: false, required: true, input_html: {oninvalid: "this.setCustomValidity('What is your name?')", oninput: "setCustomValidity('')"} %>
 
