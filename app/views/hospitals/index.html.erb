@@ -1,0 +1,60 @@
+<div>
+  <p>Is your hospital in need of volunteer assistance? Our volunteers can provide a <a href='/'>variety of services</a>. Sign up today and we'll connect you with volunteers in your area as soon as they're available.</p>
+</div>
+<div class="offset-md-2 col-md-8 px-0 py-5">
+  <div id="hospital-submit" class="card shadow">
+    <div class="card-header d-flex align-items-center justify-content-between pb-0">
+      <div class="cover-lead font-weight-bold">
+        <p>Register Your Hospital</p>
+      </div>
+
+    </div>
+    <div class="card-body bg-light">
+      <form accept-charset="UTF-8" action='/api/hospital' method='POST'>
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <div class='form-group'>
+          <label for='country' />
+          <select class='form-control select' id='hospital_country' name='country'>
+            <option value='none' selected disabled hidden>Choose your country</option>
+            <% @countries_collection.each do |country| %>
+              <option value=<%= country[1] %>><%= country[0] %></option>
+            <% end %>
+          </select>
+        </div>
+
+        <div class='form-group'>
+          <label for='state' />
+          <select class='form-control select' id='hospital_state' name='state' hidden='true'>
+          </select>
+        </div>
+
+        <div class='form-group'>
+          <label for='city' />
+          <select class='form-control select' id='hospital_city' hidden='true' name='city'>
+          </select>
+        </div>
+
+        <div class='form-group'>
+          <label for='hospital_name' />
+          <input type='text' name='hospital_name' class='form-control string' placeholder='Hospital name' />
+        </div>
+
+        <div class='form-group'>
+          <label for='contact_name' />
+          <input type='text' name='contact_name' class='form-control string' placeholder='Contact name' />
+        </div>
+
+        <div class='form-group'>
+          <label for='contact_email' />
+          <input type='text' name='contact_email' class='form-control string' placeholder='Contact email' />
+        </div>
+
+        <button class="btn btn-danger btn-block btn-lg font-weight-bold shadow" type='submit'>Register</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<%= javascript_pack_tag 'location_selector', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag "theme" %>
