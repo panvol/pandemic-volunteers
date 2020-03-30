@@ -28,9 +28,9 @@ en:
         phone: 'Phone number'
         about: 'How could you help?'
       partner:
-        name: 'Organization Name'
-        about: 'About the Organization'
+        name: 'Organization name'
+        about: 'About the organization'
       partner_staff:
-        name: 'Contact Name'
-        email: 'Contact Email'
-        about: 'Contact Role'
+        name: 'Contact name'
+        email: 'Contact email'
+        about: 'Contact role'
