@@ -8,6 +8,10 @@ a:focus,
 a:hover {
 }
 
+a .active {
+  color: blue !important;
+}
+
 /* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,
@@ -74,6 +78,29 @@ body {
   .nav-masthead {
     float: right;
   }
+}
+
+.link-no-underline, .link-no-underline:hover {
+  text-decoration: none;
+}
+
+.link-black, .link-black:hover {
+  color: var(--dark);
+}
+
+.nav-link {
+  color: var(--danger);
+}
+
+.nav-link:hover {
+  color: #a71d2a; 
+}
+
+.nav-link.active{
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: var(--dark) !important; 
 }
 
 

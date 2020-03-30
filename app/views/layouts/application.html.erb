@@ -15,17 +15,19 @@
     <div class="d-flex w-100 h-100 mx-auto flex-column center-block">
       <header class="masthead mb-auto bg-light">
         <div class="cover-container m-auto">
-        <div class="inner center-block">
-          <h3 class="nav masthead-brand justify-content-center py-3 ">
-            <%= inline_svg_tag "logo/logo.svg", size: '1.2em', class: 'mr-2' %>
-            Pandemic Volunteers
-          </h3>
-          <nav class="nav nav-masthead justify-content-center py-3">
-            <a class="text-danger mx-3 nav-link active" href="/hospitals">Hospitals</a>
-            <a class="text-danger mx-3 nav-link" href="#">Partners</a>
-            <a class="text-danger mx-3 nav-link" href="https://www.notion.so/Pandemic-Volunteers-cf5a155708614c3fa77f00d93bdd02a1" target="_blank">FAQ</a>
-          </nav>
-        </div>
+          <div class="inner center-block">
+            <h3 class="nav masthead-brand justify-content-center">
+              <a href="/" class="nav-link link-no-underline <%= 'active' if current_page?(controller: 'home') %>">
+                <%= inline_svg_tag "logo/logo.svg", size: '1.2em', class: 'mb-1' %>
+                  Pandemic Volunteers
+              </a>
+            </h3>
+            <nav class="nav nav-masthead pt-2 justify-content-center">
+              <a class="nav-link mr-3 <%= 'active' if current_page?(controller: 'hospitals') %>" href="/hospitals">Hospitals</a>
+              <a class="nav-link mx-3 <%= 'active' if current_page?(controller: 'partners') %>" href="/partners">Partners</a>
+              <a class="nav-link ml-3" href="https://www.notion.so/Pandemic-Volunteers-cf5a155708614c3fa77f00d93bdd02a1" target="_blank">FAQ</a>
+            </nav>
+          </div>
         </div>
       </header>
 
@@ -49,17 +51,17 @@
                   <p class="w-100 m-auto mx-3">
                     <small>
                       <strong class="mr-4">
-                        <a href="https://www.notion.so/Pandemic-Volunteers-cf5a155708614c3fa77f00d93bdd02a1" target="_blank" style="color: black">
+                        <a class="text-dark" href="https://www.notion.so/Pandemic-Volunteers-cf5a155708614c3fa77f00d93bdd02a1" target="_blank">
                           About Pandemic Volunteers
                         </a>
                       </strong>
                       <strong>
-                        <a href="#" style="color: black">
+                        <a class="text-dark" href="#">
                           Terms of Service
                         </a>
                       </strong>
                       <strong class="ml-4">
-                        <a href="#" style="color: black">
+                        <a class="text-dark" href="#">
                           Privacy Policy
                         </a>
                       </strong>
@@ -70,19 +72,19 @@
               <div class="m-auto col-md-4 center-block">
                 <div class="row my-2 justify-content-center align-middle">
                   <p class="m-auto w-100">
-                    <a href="https://twitter.com/PandemicVolntrs" target="_blank" style="color: black; text-decoration: none;">
+                    <a href="https://twitter.com/PandemicVolntrs" target="_blank" class="text-dark link-no-underline">
                       <i class="fab fa-twitter fa-2x mr-2"></i>
                     </a>
-                    <a href="https://facebook.com/PandemicVolunteers" target="_blank" style="color: black; text-decoration: none;">
+                    <a href="https://facebook.com/PandemicVolunteers" target="_blank" class="text-dark link-no-underline">
                       <i class="fab fa-facebook-square fa-2x mx-2"></i>
                     </a>
-                    <a href="https://instagram.com/pandemicvolunteers" target="_blank" style="color: black; text-decoration: none;">
+                    <a href="https://instagram.com/pandemicvolunteers" target="_blank" class="text-dark link-no-underline">
                       <i class="fab fa-instagram fa-2x mx-2"></i>
                     </a>
-                    <a href="https://medium.com/@PandemicVolntrs" target="_blank" style="color: black; text-decoration: none;">
+                    <a href="https://medium.com/@PandemicVolntrs" target="_blank" class="text-dark link-no-underline">
                       <i class="fab fa-medium fa-2x mx-2"></i>
                     </a>
-                    <a href="https://github.com/hantuzun/pandemic-volunteers/blob/master/README.md" target="_blank" style="color: black; text-decoration: none;">
+                    <a href="https://github.com/hantuzun/pandemic-volunteers/blob/master/README.md" target="_blank" class="text-dark link-no-underline">
                       <i class="fab fa-github fa-2x ml-2"></i>
                     </a>
                   </p>
