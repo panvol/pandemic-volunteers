@@ -1,0 +1,45 @@
+<div class="text-center container py-5">
+  <p class="cover-heading">Partners provide opportunities for volunteers.</p>
+  <p class="cover-lead">
+    We connect your orginzation with our network of volunteers.
+  </p>
+</div>
+
+<div class="offset-md-2 col-md-8 px-0 py-5">
+  <div id="apply" class="card shadow">
+    <div class="card-header d-flex align-items-center justify-content-between pb-0">
+      <div class="cover-lead font-weight-bold">
+        <p>Register as a partner</p>
+      </div>
+    </div>
+    <div class="card-body bg-light">
+      <!-- /#apply is used to retain form errors and scroll to the form in case of errors -->
+      <%= simple_form_for partner, method: :post do |f| %>
+        <%= f.input :country, collection: @countries_collection, prompt: "Choose your country", label: false %>
+
+        <%= f.input :state, label: false, collection: [], input_html: {hidden: true} %>
+
+        <%= f.input :city, label: false, collection: [], input_html: {hidden: true} %>
+
+        <%= f.input :name, label: false, required: true, input_html: {oninvalid: "this.setCustomValidity('What is your organization\'s name?')", oninput: "setCustomValidity('')"} %>
+
+        <%= f.input :about, label: false, as: :text, input_html: {minlength: 20, oninvalid: "setCustomValidity('What does your organization do?')", oninput: "setCustomValidity('')"} %>
+
+        <%= f.input :partner_type, label: false, collection: Partner.partner_types.to_a.collect{|option| [option[0], option[0]]}, prompt: "Choose your organization type" %>
+
+        <%= simple_fields_for :partner_staff, partner_staff do |staff_fields| %>
+          <%= staff_fields.input :name, label: false, required: true, input_html: {oninvalid: "this.setCustomValidity('What is your name?')", oninput: "setCustomValidity('')"} %>
+
+          <%= staff_fields.input :email, label: false, required: true, input_html: {oninvalid: "this.setCustomValidity('What is your email?')", oninput: "setCustomValidity('')"} %>
+
+          <%= staff_fields.input :about, label: false, required: true, input_html: {oninvalid: "this.setCustomValidity('What is your role at your organization?')", oninput: "setCustomValidity('')"} %>
+        <% end %>
+
+        <%= f.button :submit, "Register", class: "btn-danger btn-block btn-lg font-weight-bold shadow" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%= javascript_pack_tag 'location_selector', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag "theme" %>

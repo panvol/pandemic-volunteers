@@ -27,3 +27,10 @@ en:
         email: 'Email address'
         phone: 'Phone number'
         about: 'How could you help?'
+      partner:
+        name: 'Organization Name'
+        about: 'About the Organization'
+      partner_staff:
+        name: 'Contact Name'
+        email: 'Contact Email'
+        about: 'Contact Role'
