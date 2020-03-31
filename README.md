@@ -3,17 +3,18 @@
 </div>
 
 # ⚠️ Help Wanted
+Website: [Pandemic Volunteers](https://pandemicvolunteers.org)
 
-Please help building and managing [Pandemic Volunteers](https://pandemicvolunteers.org).
+Knowledge base: [https://www.notion.so/Pandemic-Volunteers](https://www.notion.so/Pandemic-Volunteers-cf5a155708614c3fa77f00d93bdd02a1)
 
-Ruby on Rails developers and staff to interview applicants are especially needed.
+We need help in HR, PR, PM, design and development. Please get in touch through: https://helpwithcovid.com/projects/441-pandemic-volunteers or `contact@pandemicvolunteers.org`
 
-Get in touch via email: `contact@pandemicvolunteers.org`
-
+# ⭐ Give Us a Star!
+It helps us by getting exposed to your followers. We need more hands.
 
 # 🕵️ Looking for Feedback
 
-Please have a look at https://pandemicvolunteers.org
+Please have a look at https://PandemicVolunteers.org
 
 Feedback from doctors, medical workers and more would be really appreciated.
 
