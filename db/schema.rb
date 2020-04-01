@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 2020_03_29_212730) do
     t.boolean "assigned", default: false, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "group"
+    t.integer "crew"
   end
 
 end

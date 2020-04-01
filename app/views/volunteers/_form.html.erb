@@ -11,7 +11,7 @@
 
   <%= f.input :phone, label: false, input_html: { autocomplete: 'tel' }, input_html: {minlength: 7, oninvalid: "setCustomValidity('What is your phone number?')", oninput: "setCustomValidity('')"} %>
 
-  <%= f.input :group, collection: volunteer_support_units, prompt: "Choose what can you help with", label: false %>
+  <%= f.input :crew, collection: volunteer_crews, prompt: "Choose what can you help with", label: false %>
 
   <%= f.input :about, label: false, as: :text, input_html: {minlength: 20, oninvalid: "setCustomValidity('How would you like to help?')", oninput: "setCustomValidity('')"} %>
 

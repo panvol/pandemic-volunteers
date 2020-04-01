@@ -1,12 +1,12 @@
 class Volunteer < ApplicationRecord
-  enum groups: {
-    "hospital" => "help nurses in hospitals",
-    "triage" => "visit patients in home isolation",
-    "healthcare" => "give care to dependents of healthcare workers",
-    "elderly" => "cater to the needs of the elderly",
-    "research" => "curate academic research for busy doctors",
-    "operations" => "operations",
-    "other" => "other"
+  enum crew: {
+    "aid crew" => 0,
+    "elderly crew" => 1,
+    "coordination crew" => 2,
+    "research crew" => 3,
+    "triage crew" => 4,
+    "hospital crew" => 5,
+    "other" => 6
   }
 
   validates :email, presence: true, format: /\b[A-Z0-9._%a-z\-]+@(?:[A-Z0-9a-z\-]+\.)+[A-Za-z]{2,4}\z/
