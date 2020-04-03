@@ -1,9 +1,9 @@
 // Find the city select box
 var volunteer_city = document.getElementById("volunteer_city");
-let hospital_city = document.getElementById('hospital_city');
-let partner_city = document.getElementById('partner_city');
+var hospital_city = document.getElementById('hospital_city');
+var partner_city = document.getElementById('partner_city');
 
-const updateCity = (city_element, city) => {
+var updateCity = (city_element, city) => {
   // Clear the options in the select box
   while (city_element.firstChild) city_element.removeChild(city_element.firstChild);
 
