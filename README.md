@@ -72,9 +72,7 @@ $ brew install yarn
 
 $ brew install postgresql
 
-$ gem install bundler
-
-$ gem install foreman
+$ gem install bundler:2.1.4
 ```
 
 ### Install 
@@ -96,7 +94,7 @@ $ brew services start postgresql
 Run the project:
 
 ```sh
-$ foreman start
+$ rails server
 ```
 
 On your first time running the project, and whenever the DB schema is updated, you need to update your local DB with the following command:
