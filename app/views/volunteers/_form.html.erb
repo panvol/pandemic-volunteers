@@ -9,7 +9,7 @@
 
   <%= f.input :email, label: false, input_html: { autocomplete: 'email' }, input_html: {minlength: 7, oninvalid: "this.setCustomValidity('What is your email address?')", oninput: "setCustomValidity('')"} %>
 
-  <%= f.input :phone, label: false, input_html: { autocomplete: 'tel' }, input_html: {minlength: 7, oninvalid: "setCustomValidity('What is your phone number?')", oninput: "setCustomValidity('')"} %>
+  <%= f.input :phone, label: false, input_html: { autocomplete: 'tel' } %>
 
   <%= f.input :crew, collection: volunteer_crews, prompt: "Choose what can you help with", label: false %>
 
