@@ -3,36 +3,34 @@ var volunteer_city = document.getElementById("volunteer_city");
 var hospital_city = document.getElementById('hospital_city');
 var partner_city = document.getElementById('partner_city');
 
-var updateCity = (city_element, city) => {
-  // Clear the options in the select box
-  while (city_element.firstChild) city_element.removeChild(city_element.firstChild);
+var updateCity = (city) => {
+  // Clear the current value and the options in the select box
+  city.value = "";
+  while (city.firstChild) city.removeChild(city.firstChild);
 
   if ( <%= @selected_state == "" || @cities.count == 0 %> ) {
-    city_element.value = "";
-    city_element.hidden = true;
+    city.value = "";
+    city.hidden = true;
   }
 
   if ( <%= @cities.count != 0 %> ) {
-    city_element.hidden = false;
+    city.hidden = false;
 
     // Add a placeholder
     var placeholder = document.createElement("option");
     placeholder.text = "Choose your city";
     placeholder.value = "";
-    city_element.appendChild(placeholder);
+    city.appendChild(placeholder);
 
     // Add the states
     <% @cities.each do |c| %>
-    city_element.options[city_element.options.length] = new Option('<%= c %>');
+    city.options[city.options.length] = new Option('<%= c %>');
     <% end %>
   }
 }
 
-[[volunteer_city_element, volunteer_city], [hospital_city_element, hospital_city], [partner_city_element, partner_city]].forEach((pair) => {
-  let city_element = pair[0];
-  let city = pair[1];
-
-  if (city_element && city) {
-    updateCity(pair[0], pair[1]);
+[volunteer_city, hospital_city, partner_city].forEach((city) => {
+  if (city) {
+    updateCity(city);
   }
 })
