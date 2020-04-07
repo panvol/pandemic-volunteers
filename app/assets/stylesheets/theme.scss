@@ -28,9 +28,10 @@ html {
   scroll-behavior: smooth;
 }
 
+/* fix for stick to bottom footer */
 html,
 body {
-  /*height: 100%;*/
+  height: 100%;
 }
 
 body {
@@ -114,25 +115,13 @@ body {
   font-weight: 700;
 }
 
-body
-{
-  position:relative ;
-  margin-bottom:100px;
-}
 
 
-/* fix for stick to bottom footer */
 /*
  * Footer
  */
 .mastfoot {
-  margin-top:auto; 
-  overflow:hidden;
-  bottom: 0;
-  left: 0;
-  height: 100px;
-  position: fixed;
-  right: 0;
+  
 }
 
 .cover-heading {
