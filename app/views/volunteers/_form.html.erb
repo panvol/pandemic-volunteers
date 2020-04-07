@@ -1,0 +1,21 @@
+<%= simple_form_for volunteer, url: '/#apply', method: :post do |f| %>
+  <%= f.input :country, collection: countries, label: false,  :selected => 'US'%>
+
+  <%= f.input :state, label: false, collection: states, :selected => 'NY' %>
+
+  <%= f.input :city, label: false, collection: cities, :selected => 'New York' %>
+
+  <%= f.input :name, label: false, required: true, input_html: {oninvalid: "this.setCustomValidity('What is your name?')", oninput: "setCustomValidity('')"} %>
+
+  <%= f.input :email, label: false, input_html: { autocomplete: 'email' }, input_html: {minlength: 7, oninvalid: "this.setCustomValidity('What is your email address?')", oninput: "setCustomValidity('')"} %>
+
+  <%= f.input :phone, label: false, input_html: { autocomplete: 'tel' }, input_html: {minlength: 7, oninvalid: "setCustomValidity('What is your phone number?')", oninput: "setCustomValidity('')"} %>
+
+  <%= f.input :crew, collection: volunteer_crews, prompt: "Choose what can you help with", label: false %>
+
+  <%= f.input :about, label: false, as: :text, input_html: {minlength: 20, oninvalid: "setCustomValidity('How would you like to help?')", oninput: "setCustomValidity('')"} %>
+
+  <%= f.input :immunity, as: :radio_buttons, :collection => [ ['Yes', true], ['No', false] ], :checked => ['No', false] %>
+
+  <%= f.button :submit, "Apply for volunteering", id: 'volunteer_submit', class: "btn-danger btn-block btn-lg font-weight-bold shadow" %>
+<% end %>
