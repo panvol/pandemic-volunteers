@@ -733,3 +733,10 @@ healthchecksdb
 MigrationBackup/
 
 # End of https://www.gitignore.io/api/vim,ruby,rails,linux,macos,emacs,windows,rubymine,sublimetext,visualstudio
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
