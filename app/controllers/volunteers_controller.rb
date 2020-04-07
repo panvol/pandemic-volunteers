@@ -6,6 +6,7 @@ class VolunteersController < ApplicationController
     @volunteer.city = nil if @volunteer.city.blank?
 
     if @volunteer.save
+      VolunteerNotifierMailer.send_registration_email(@volunteer).deliver_now
       flash.notice = '<i class="fas fa-heart mr-1"></i> Thanks! We will contact you soon'
       redirect_to '/' and return
     else
