@@ -17,5 +17,7 @@ module Pandemicresponse
     # the framework and any gems in your application.
 
     config.browser_validations = true
+
+    config.action_mailer.default_url_options = { host: ENV["DOMAIN"] || "http://localhost:3000" }
   end
 end

@@ -1,13 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <style>
-      /* Email styles need to be inline */
-    </style>
-  </head>
 
-  <body>
-    <%= yield %>
-  </body>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style>
+    body {
+      margin: 0;
+      background-color: rgb(220, 53, 69);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+
+    header {
+      margin-bottom: 12px;
+    }
+
+    header a {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 24px;
+      text-decoration: none;
+      color: var(--dark) !important;
+    }
+
+    header a span {
+      margin-left: 6px;
+    }
+
+    .container {
+      min-width: 300px;
+      max-width: 500px;
+      width: 75%;
+      height: calc(100vh - 48px);
+      margin: auto;
+      padding: 24px 36px;
+      background-color: #fff;
+    }
+
+    main {
+      padding: 12px 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <a href="<%= url_for controller: :home, action: :index %>">
+        <%= inline_svg_tag "logo/logo.svg", size: '1.2em', class: 'mb-2' %>
+        <span>Pandemic Volunteers</span>
+      </a>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+  </div>
+</body>
+
 </html>
