@@ -4,7 +4,7 @@ class VolunteersController < ApplicationController
     @volunteer.country = nil if @volunteer.country.blank?
     @volunteer.state = nil if @volunteer.state.blank?
     @volunteer.city = nil if @volunteer.city.blank?
-    
+
     if @volunteer.save
       flash.notice = '<i class="fas fa-heart mr-1"></i> Thanks! We will contact you soon'
       redirect_to '/' and return
@@ -17,6 +17,16 @@ class VolunteersController < ApplicationController
   private
 
   def volunteer_params
-    params.require(:volunteer).permit(:country, :state, :city, :name, :email, :phone, :immunity, :about)
+    params.require(:volunteer).permit(
+      :country,
+      :state,
+      :city,
+      :name,
+      :email,
+      :phone,
+      :immunity,
+      :about,
+      :crew
+    )
   end
 end
