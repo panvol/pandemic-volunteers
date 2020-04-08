@@ -2,8 +2,7 @@ require "rails_helper"
 
 RSpec.describe VolunteerNotifierMailer, type: :mailer do
   describe "send_registration_email" do
-    VolunteerStub = Struct.new(:email, :name)
-    volunteer = VolunteerStub.new('thor@asgard.gov', 'Thor Odinson')
+    volunteer = Volunteer.new(email: 'thor@asgard.gov', name: 'Thor Odinson')
     let(:mail) { VolunteerNotifierMailer.send_registration_email(volunteer) }
 
     it "renders the headers" do
