@@ -19,13 +19,19 @@
             <h3 class="nav masthead-brand justify-content-center">
               <a href="/" class="nav-link link-no-underline <%= 'active' if current_page?(controller: 'home') %>">
                 <%= inline_svg_tag "logo/logo.svg", size: '1.2em', class: 'mb-2' %>
-                  Pandemic Volunteers
+                <%= t(".brand") %>
               </a>
             </h3>
             <nav class="nav nav-masthead pt-2 justify-content-center">
-              <a class="nav-link mr-3 <%= 'active' if current_page?(controller: 'hospitals') %>" href="/hospitals">Hospitals</a>
-              <a class="nav-link mx-3 <%= 'active' if current_page?(controller: 'partners') %>" href="/partners">Partners</a>
-              <a class="nav-link ml-3" href="https://www.notion.so/Pandemic-Volunteers-cf5a155708614c3fa77f00d93bdd02a1" target="_blank">FAQ</a>
+              <a class="nav-link mr-3 <%= 'active' if current_page?(controller: 'hospitals') %>" href="/hospitals">
+                <%= t(".hospitals_nav_link") %>
+              </a>
+              <a class="nav-link mx-3 <%= 'active' if current_page?(controller: 'partners') %>" href="/partners">
+                <%= t(".partners_nav_link") %>
+              </a>
+              <a class="nav-link ml-3" href="https://www.notion.so/Pandemic-Volunteers-cf5a155708614c3fa77f00d93bdd02a1" target="_blank">
+                <%= t(".faq_nav_link") %>
+                </a>
             </nav>
           </div>
         </div>
@@ -45,24 +51,25 @@
                 <div class="row my-2">
                   <p class="w-100 m-auto text-muted">
                     <small>
-                      Pandemic Volunteers is an international humanitarian medical NGO in the works.
+                      <%= t(".ngo_message") %>
                     </small>
                   </p>
                   <p class="w-100 m-auto mx-3">
                     <small>
                       <strong class="mr-4">
                         <a class="text-dark" href="https://www.notion.so/Pandemic-Volunteers-cf5a155708614c3fa77f00d93bdd02a1" target="_blank">
-                          About Pandemic Volunteers
+                          <%=t(".about_footer_link") %>
                         </a>
                       </strong>
                       <strong>
                         <a class="text-dark" href="#">
-                          Terms of Service
+                          <%= t(".tos_link") %>
                         </a>
                       </strong>
                       <strong class="ml-4">
                         <a class="text-dark" href="#">
-                          Privacy Policy
+                          <%= t(".privacy_link") %>
+
                         </a>
                       </strong>
                     </small>

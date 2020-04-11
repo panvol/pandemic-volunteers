@@ -1,10 +1,12 @@
 <div class="text-center container py-5">
-  <p class="cover-heading">You can save <span class="lives">lives</span>. </p>
+  <p class="cover-heading">
+    <%= t(".hero_header_text") %>
+  </p>
   <p class="cover-lead">
-    Help tackle the coronavirus pandemic.
+    <%= t(".hero_subheader_text") %>
   </p>
   <a role="button" class="btn btn-danger btn-lg px-4 mt-3 mb-5 shadow" href="#apply">
-    Volunteer
+    <%= t(".hero_cta") %>
   </a>
 </div>
 
@@ -15,16 +17,16 @@
   <div class="col-md-8">
     <p class="cover-lead font-weight-bold">
       <span class="mr-2 align-middle">
-        Elderly Crews
+        <%= t(".elderly_crews_title") %>
       </span>
       </br>
       <span style="font-size: 10pt" class="badge badge-primary align-middle">
         <i class="fas fa-walking"></i>
-        mobile
+        <%= t(".mobile_badge") %>
       </span>
     </p>
     <p>
-      Think of a very transmissive virus just like SARS-CoV-2 but much more deadly. This is what your elderly neighbours deal with. They need your help to survive this pandemic. Assist them with simple tasks like shopping. Do not expose them to even a minor risk by disinfecting every item you hand to them.
+      <%= t(".elderly_crews_description") %>
     </p>
   </div>
 </div>
@@ -35,11 +37,13 @@
   </div>
   <div class="col-md-8">
     <p class="cover-lead font-weight-bold">
-      <span class="mr-2 align-middle">Coordination Crews</span>
+      <span class="mr-2 align-middle">
+        <%= t(".coordination_crews_title") %>
+      </span>
       </br>
       <span style="font-size: 10pt" class="badge badge-success align-middle">
         <i class="fas fa-laptop"></i>
-        remote
+        <%= t(".remote_badge") %>
       </span>
     </p>
     <p>
@@ -78,7 +82,9 @@
   </div>
   <div class="col-md-8">
     <p class="cover-lead font-weight-bold">
-      <span class="mr-2 align-middle">Triage Crews</span>
+      <span class="mr-2 align-middle">
+        <%= t(".triage_crews_title") %>
+      </span>
       </br>
       <span style="font-size: 10pt" class="badge badge-success align-middle">
         <i class="fas fa-laptop"></i>
@@ -92,11 +98,30 @@
       COVID-19 patients with mild symptoms are instructed to treat themselves at home. Most of them are unable to judge their condition and lack the required knowledge not to infect their households. Read our required guidelines and use online triage tools to help patients on evaluating their conditions with video or phone calls.
     </p>
   </div>
-</div>
 
-<div class="row my-5 mx-0">
-  <div class="col-md-4 d-flex text-center justify-content-center">
-    <%= inline_svg_tag "graphics/home/undraw_doctors_hwty.svg", size: '200', class: 'm-auto' %>
+  <div class="row my-5 mx-0">
+    <div class="col-md-4 d-flex text-center justify-content-center">
+      <%= inline_svg_tag "graphics/home/undraw_doctors_hwty.svg", size: '200', class: 'm-auto' %>
+    </div>
+    <div class="col-md-8">
+      <p class="cover-lead font-weight-bold">
+        <span class="mr-2 align-middle">
+          <%= t(".hospital_crews_title") %>
+        </span>
+        </br>
+        <span style="font-size: 10pt" class="badge badge-info align-middle">
+          <i class="fas fa-h-square"></i>
+          <%= t(".at_hospitals_badge") %>
+        </span>
+        <span style="font-size: 10pt" class="badge badge-danger align-middle">
+          <i class="fas fa-shield-virus"></i>
+          <%= t(".requires_immunity_badge") %>
+        </span>
+      </p>
+      <p>
+        <%= t(".hospital_crews_description") %>
+      </p>
+    </div>
   </div>
   <div class="col-md-8">
     <p class="cover-lead font-weight-bold">

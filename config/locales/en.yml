@@ -40,4 +40,76 @@ en:
               invalid: "is not a valid email address."
             phone:
               invalid: "is not a valid phone number."
-
+  layouts:
+    application:
+      brand: "Pandemic Volunteers"
+      hospitals_nav_link: "Hospitals"
+      partners_nav_link: "Partners"
+      faq_nav_link: "FAQ"
+      ngo_message: "Pandemic Volunteers is an international humanitarian medical NGO in the works."
+      about_footer_link: "About Pandemic Volunteers"
+      tos_link: "Terms of Service"
+      privacy_link: "Privacy Policy"
+  home:
+    index:
+      hero_header_text: "You can save lives."
+      hero_subheader_text: "Help tackle the coronavirus pandemic."
+      hero_cta: "Volunteer"
+      mobile_badge: "Mobile"
+      remote_badge: "Remote"
+      or_badge: "or"
+      requires_credentials_badge: "requires credentials"
+      requires_immunity_badge: "requires immunity"
+      at_hospitals_badge: "at hospitals"
+      aid_crews_title: "Aid Crews"
+      aid_crews_description: "Doctors and nurses don’t only care for their patients, but also their children, parents, and pets. Take care of healthcare workers by volunteering to check in on their loved ones. We need them, and they need you."
+      elderly_crews_title: "Elderly Crews"
+      elderly_crews_description: "Think of a very transmissive virus just like SARS-CoV-2 but much more deadly. This is what your elderly neighbours deal with. They need your help to survive this pandemic. Assist them with simple tasks like shopping. Do not expose them to even a minor risk by disinfecting every item you hand to them."
+      coordination_crews_title: "Coordination Crews"
+      coordination_crews_description: "Join our team and help us coordinate Pandemic Volunteers. Even a few hours a week can help us achieve our mission. Bring your expertise, or help us coordinate your local teams. However you think you can help, we can use it."
+      research_ambassadors_title: "Research Ambassadors"
+      research_ambassadors_description: "There are around 140 studies published about COVID-19 every day. Reviewing these studies are crucial in determining the best treatments. However, the medical doctors in the field are not even able to sleep at their homes. Reach out to your local hospital and create a chat group with your doctors. Inform them about latest actionable guidelines. Answer their COVID-19 related questions."
+      triage_crews_title: "Triage Crews"
+      triage_crews_description: "Most COVID-19 patients are being sent to home isolation. They don't know how to assess their conditions. Have video calls and help them evaluating their severity. If you are immune, equip yourself with a thermometer and an oximeter to visit critical patients at their homes. Report your neighbours' conditions to your health system through Pandemic Volunteers."
+      hospital_crews_title: "Hospital Crews"
+      hospital_crews_description: "Nurses and other hospital staff work 24/7 at this moment. This unsustainable work demand decreases the quality of medical care and costs lives. Join a group of volunteers at your local hospital to help medical staff. Ease the lives of the heroes of our time. Disinfect personal protective equipment. Help with logistics. Do whatever your local hospital needs you to do."
+      form:
+        header: "Apply for volunteering"
+        cta: "Apply for volunteering"
+  volunteers:
+    form:
+      defaults:
+        crew_collection: "Choose what you can help with"
+      errors:
+        name: "What is your name?"
+        email: "What is your email address?"
+        phone: "What is your phone number?"
+        about: "How would you like to help?"
+  hospitals:
+    index:
+      header: "Does your hospital need help?"
+      subheader: "Let us bring volunteers to your institution."
+      form:
+        header: "Register your hospital"
+        cta: "Register"
+        defaults:
+          country: "Choose your country"
+          hospital_name: "Hospital name"
+          contact_name: "Contact name"
+          contact_email: "Contact email"
+  partners:
+    index:
+      header: "Let's work together."
+      subheader: "Let us connect your organization with our volunteers."
+      form:
+        header: "Register as a partner"
+        cta: "Register"
+        defaults:
+          country: "Choose your country"
+        errors:
+          organization_name: "What is your organization name?"
+          organization_about: "What does your organization do?"
+          organization_type: "Choose your organization type"
+          staff_name: "What is your name?"
+          staff_email: "What is your email?"
+          staff_role: "What is your role at your organization?"

@@ -1,41 +1,70 @@
 <div class="text-center container py-5">
-  <p class="cover-heading">Let's work together.</p>
-  <p class="cover-lead">
-    Let us connect your organization with our volunteers. 
-  </p>
+  <p class="cover-heading"><%= t(".header") %></p>
+  <p class="cover-lead"><%= t(".subheader") %></p>
 </div>
 
 <div class="offset-md-2 col-md-8 px-0 pb-5">
   <div id="apply" class="card shadow">
     <div class="card-header d-flex align-items-center justify-content-between pb-0">
       <div class="cover-lead font-weight-bold">
-        <p>Register as a partner</p>
+        <p><%= t(".form.header")%></p>
       </div>
     </div>
     <div class="card-body bg-light">
       <!-- /#apply is used to retain form errors and scroll to the form in case of errors -->
       <%= simple_form_for partner, method: :post do |f| %>
-        <%= f.input :country, collection: @countries_collection, prompt: "Choose your country", label: false %>
+        <%= f.input :country, collection: @countries_collection, prompt: t(".form.defaults.country"), label: false %>
 
         <%= f.input :state, label: false, collection: [], input_html: {hidden: true} %>
 
         <%= f.input :city, label: false, collection: [], input_html: {hidden: true} %>
 
-        <%= f.input :name, label: false, required: true, input_html: {oninvalid: "this.setCustomValidity('What is your organization\'s name?')", oninput: "setCustomValidity('')"} %>
+        <%= f.input :name,
+          label: false,
+          required: true,
+          input_html: {
+            oninvalid: "this.setCustomValidity('#{t(".errors.organization_name")}')",
+            oninput: "setCustomValidity('')"
+          } %>
 
-        <%= f.input :about, label: false, as: :text, input_html: {minlength: 20, oninvalid: "setCustomValidity('What does your organization do?')", oninput: "setCustomValidity('')"} %>
+        <%= f.input :about,
+          label: false,
+          as: :text,
+          input_html: {
+            minlength: 20,
+            oninvalid: "this.setCustomValidity('#{t(".form.errors.organization_about")}')",
+            oninput: "setCustomValidity('')"
+          } %>
 
-        <%= f.input :partner_type, label: false, collection: Partner.partner_types.to_a.collect{|option| [option[0], option[0]]}, prompt: "Choose your organization type" %>
+        <%= f.input :partner_type, label: false, collection: Partner.partner_types.to_a.collect{|option| [option[0], option[0]]}, prompt: t(".form.errors.organization_type") %>
 
         <%= simple_fields_for :partner_staff, partner_staff do |staff_fields| %>
-          <%= staff_fields.input :name, label: false, required: true, input_html: {oninvalid: "this.setCustomValidity('What is your name?')", oninput: "setCustomValidity('')"} %>
+          <%= staff_fields.input :name,
+            label: false,
+            required: true,
+            input_html: {
+              oninvalid: "this.setCustomValidity('#{t(".form.errors.staff_name")}')",
+              oninput: "setCustomValidity('')"
+            } %>
 
-          <%= staff_fields.input :email, label: false, required: true, input_html: {oninvalid: "this.setCustomValidity('What is your email?')", oninput: "setCustomValidity('')"} %>
+          <%= staff_fields.input :email,
+            label: false,
+            required: true,
+            input_html: {
+              oninvalid: "this.setCustomValidity('#{t(".form.errors.staff_email")}')",
+              oninput: "setCustomValidity('')"
+            } %>
 
-          <%= staff_fields.input :about, label: false, required: true, input_html: {oninvalid: "this.setCustomValidity('What is your role at your organization?')", oninput: "setCustomValidity('')"} %>
+          <%= staff_fields.input :about,
+            label: false,
+            required: true,
+            input_html: {
+              oninvalid: "this.setCustomValidity('#{t(".form.errors.staff_role")}')",
+              oninput: "setCustomValidity('')"
+            } %>
         <% end %>
 
-        <%= f.button :submit, "Register", class: "btn-danger btn-block btn-lg font-weight-bold shadow" %>
+        <%= f.button :submit, t(".form.cta"), class: "btn-danger btn-block btn-lg font-weight-bold shadow" %>
       <% end %>
     </div>
   </div>

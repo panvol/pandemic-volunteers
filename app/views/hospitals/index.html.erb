@@ -1,14 +1,18 @@
 <div class="text-center container py-5">
-  <p class="cover-heading">Does your hospital need help?</p>
+  <p class="cover-heading">
+    <%= t(".header") %>
+  </p>
   <p class="cover-lead">
-    Let us bring volunteers to your institution.
+    <%= t(".subheader") %>
   </p>
 </div>
 <div class="offset-md-2 col-md-8 px-0 pb-5">
   <div id="hospital-submit" class="card shadow">
     <div class="card-header d-flex align-items-center justify-content-between pb-0">
       <div class="cover-lead font-weight-bold">
-        <p>Register your hospital</p>
+        <p>
+          <%= t(".form.header") %>
+        </p>
       </div>
 
     </div>
@@ -17,7 +21,9 @@
         <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
         <div class='form-group'>
           <select class='form-control select w-100' id='hospital_country' name='country'>
-            <option value='none' selected disabled hidden>Choose your country</option>
+            <option value='none' selected disabled hidden>
+            <%= t(".form.defaults.country") %>
+            </option>
             <% @countries_collection.each do |country| %>
               <option value=<%= country[1] %>><%= country[0] %></option>
             <% end %>
@@ -35,18 +41,35 @@
         </div>
 
         <div class='form-group'>
-          <input type='text' name='hospital_name' class='form-control string' placeholder='Hospital name' />
+          <input
+            type='text'
+            name='hospital_name'
+            class='form-control string'
+            placeholder='<%= t(".form.defaults.hospital_name") %>'
+          />
         </div>
 
         <div class='form-group'>
-          <input type='text' name='contact_name' class='form-control string' placeholder='Contact name' />
+          <input
+            type='text'
+            name='contact_name'
+            class='form-control string'
+            placeholder='<%= t(".form.defaults.contact_name") %>'
+            />
         </div>
 
         <div class='form-group'>
-          <input type='text' name='contact_email' class='form-control string' placeholder='Contact email' />
+          <input
+            type='text'
+            name='contact_email'
+            class='form-control string'
+            placeholder='<%= t(".form.defaults.contact_email") %>'
+          />
         </div>
 
-        <button class="btn btn-danger btn-block btn-lg font-weight-bold shadow" type='submit'>Register</button>
+        <button class="btn btn-danger btn-block btn-lg font-weight-bold shadow" type='submit'>
+            <%= t(".form.cta") %>
+        </button>
       </form>
 
     </div>
