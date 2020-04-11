@@ -145,24 +145,26 @@
   </div>
 </div>
 
-<div class="offset-md-2 col-md-8 px-0 py-5">
-  <div id="apply" class="card shadow">
-    <div class="card-header d-flex align-items-center justify-content-between pb-0">
-      <div class="cover-lead font-weight-bold">
-        <p>Apply for volunteering</p>
+<div class="section">
+  <div class="offset-md-2 col-md-8 px-0 py-5">
+    <div id="apply" class="card shadow">
+      <div class="card-header d-flex align-items-center justify-content-between pb-0">
+        <div class="cover-lead font-weight-bold">
+          <p>Apply for volunteering</p>
+        </div>
       </div>
-    </div>
-    <div class="card-body bg-light">
-      <!-- /#apply is used to retain form errors and scroll to the form in case of errors -->
-      <%= render partial: 'volunteers/form',
-                 locals: {
-                   volunteer: @volunteer,
-                   countries: @countries_collection,
-                   states: @states_collection,
-                   cities: @cities_collection,
-                   volunteer_crews: @volunteer_crews
-                 }
-      %>
+      <div class="card-body bg-light">
+        <!-- /#apply is used to retain form errors and scroll to the form in case of errors -->
+        <%= render partial: 'volunteers/form',
+                   locals: {
+                     volunteer: @volunteer,
+                     countries: @countries_collection,
+                     states: @states_collection,
+                     cities: @cities_collection,
+                     volunteer_crews: @volunteer_crews
+                   }
+        %>
+      </div>
     </div>
   </div>
 </div>
