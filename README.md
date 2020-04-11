@@ -110,4 +110,5 @@ Visit http://localhost:3000
 
 ### Environment Variables
 
- * `DOMAIN`: `pandemicvolunteers.org` (Required for Open Graph Images paths)
+ * `DOMAIN`: `pandemicvolunteers.org` Required for Open Graph Images paths and emails.
+ * `SENDGRID_API_KEY`: Required for sending emails.
