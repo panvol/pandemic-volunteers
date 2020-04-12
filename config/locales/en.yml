@@ -75,7 +75,6 @@ en:
       hospital_crews_description: "Nurses and other hospital staff work 24/7 at this moment. This unsustainable work demand decreases the quality of medical care and costs lives. Join a group of volunteers at your local hospital to help medical staff. Ease the lives of the heroes of our time. Disinfect personal protective equipment. Help with logistics. Do whatever your local hospital needs you to do."
       form:
         header: "Apply for volunteering"
-        cta: "Apply for volunteering"
   volunteers:
     form:
       defaults:
@@ -85,6 +84,7 @@ en:
         email: "What is your email address?"
         phone: "What is your phone number?"
         about: "How would you like to help?"
+      cta: "Apply for volunteering"
   hospitals:
     index:
       header: "Does your hospital need help?"
