@@ -25,9 +25,7 @@ RSpec.describe "home/index" do
     expect(rendered).to match t("home.index.research_ambassadors_description")
 
     expect(rendered).to match t("home.index.triage_crews_title")
-    # the next line will fail if uncommented. I have no idea why.
-    # I suspect it is related to invalid markup and using 'or'.
-    # expect(rendered).to match t("home.index.triage_crews_description")
+    expect(rendered).to match t("home.index.triage_crews_description")
 
     expect(rendered).to match t("home.index.hospital_crews_title")
     expect(rendered).to match t("home.index.hospital_crews_description")
