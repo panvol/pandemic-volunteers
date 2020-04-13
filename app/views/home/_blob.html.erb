@@ -1,0 +1,28 @@
+<div class="row my-5 mx-0">
+  <div class="col-md-4 d-flex text-center justify-content-center">
+    <%= inline_svg_tag "graphics/home/#{hero_image_name}.svg",
+      size: "200",
+      class: "m-auto"
+    %>
+  </div>
+  <div class="col-md-8">
+    <p class="cover-lead font-weight-bold">
+      <span class="mr-2 align-middle">
+        <%= title %>
+      </span>
+      </br>
+      <% badges.each do |badge_name| %>
+        <% badge = HomeHelper::BADGES[badge_name] %>
+        <%= render partial: "home/badge", locals: {
+          icon_class: badge[:icon_class],
+          title: badge[:title],
+          theme: badge[:theme],
+        }
+        %>
+      <% end %>
+    </p>
+    <p>
+      <%= description %>
+    </p>
+  </div>
+</div>
