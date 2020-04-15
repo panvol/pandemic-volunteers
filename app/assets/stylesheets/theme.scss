@@ -88,15 +88,15 @@ body {
   color: var(--dark);
 }
 
-.nav-link {
+.red-link {
   color: var(--danger);
 }
 
-.nav-link:hover {
+.red-link:hover {
   color: #a71d2a; 
 }
 
-.nav-link.active{
+.red-link.active{
   pointer-events: none;
   cursor: default;
   text-decoration: none;
@@ -122,14 +122,21 @@ body {
 }
 
 .cover-heading {
-  font-weight: 900;
   font-size: 42pt;
+}
+
+.section-title {
+  font-size: 36pt;
+}
+
+.cover-lead {
+  font-size: 20pt;
+}
+
+.font-weight-900 {
+  font-weight: 900;
 }
 
 .lives {
   border-bottom: 5px solid rgb(220, 53, 69); box-shadow: rgb(220, 53, 69) 0px -22px 0px inset;
-}
-
-.cover-lead {
-  font-size: 18pt;
 }

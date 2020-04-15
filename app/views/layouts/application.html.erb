@@ -26,15 +26,15 @@
         <div class="cover-container m-auto">
           <div class="inner center-block">
             <h3 class="nav masthead-brand justify-content-center">
-              <a href="/" class="nav-link link-no-underline <%= 'active' if current_page?(controller: 'home') %>">
+              <a href="/" class="nav-link red-link link-no-underline <%= 'active' if current_page?(controller: 'home') %>">
                 <%= inline_svg_tag "logo/logo.svg", size: '1.2em', class: 'mb-2' %>
                   Pandemic Volunteers
               </a>
             </h3>
             <nav class="nav nav-masthead pt-2 justify-content-center">
-              <a class="nav-link mr-3 <%= 'active' if current_page?(controller: 'hospitals') %>" href="/hospitals">Hospitals</a>
-              <a class="nav-link mx-3 <%= 'active' if current_page?(controller: 'partners') %>" href="/partners">Partners</a>
-              <a class="nav-link ml-3" href="https://www.notion.so/Pandemic-Volunteers-cf5a155708614c3fa77f00d93bdd02a1" target="_blank">FAQ</a>
+              <a class="nav-link red-link mr-3 <%= 'active' if current_page?(controller: 'hospitals') %>" href="/hospitals">Hospitals</a>
+              <a class="nav-link red-link mx-3 <%= 'active' if current_page?(controller: 'partners') %>" href="/partners">Partners</a>
+              <a class="nav-link red-link ml-3" href="https://www.notion.so/Pandemic-Volunteers-cf5a155708614c3fa77f00d93bdd02a1" target="_blank">FAQ</a>
             </nav>
           </div>
         </div>
