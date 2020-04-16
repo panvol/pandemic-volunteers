@@ -1,7 +1,5 @@
-<!-- Fix this later on. -->
-<!-- Unfornunately I wasn't able to add notie through webpack. -->
-<link rel="stylesheet" type="text/css" href="https://unpkg.com/notie/dist/notie.min.css">  
-<script src="https://unpkg.com/notie"></script>
+<%= javascript_pack_tag 'notie', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_pack_tag 'notie', 'data-turbolinks-track': 'reload' %>
 
 <%= content_tag(:script) do %>
   <% flash.each do |type, message| %>

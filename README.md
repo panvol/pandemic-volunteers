@@ -70,6 +70,8 @@ Your ruby version output should begin with `ruby 2.7.1`.
 ```sh
 $ brew install yarn
 
+$ yarn install
+
 $ brew install postgresql
 
 $ gem install bundler:2.1.4
