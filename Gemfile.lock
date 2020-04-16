@@ -110,6 +110,7 @@ GEM
       nokogiri (>= 1.6)
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
+    kramdown (1.17.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -268,6 +269,7 @@ DEPENDENCIES
   faker
   inline_svg (>= 1.7.1)
   jbuilder (~> 2.7)
+  kramdown (~> 1.8)
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
   pry-byebug
