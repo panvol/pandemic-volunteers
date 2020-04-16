@@ -29,13 +29,19 @@
             <h3 class="nav masthead-brand justify-content-center">
               <a href="/" class="nav-link text-dark link-no-underline <%= 'active' if current_page?(controller: 'home') %>">
                 <%= inline_svg_tag "logo/logo.svg", size: '1.2em', class: 'mb-2' %>
-                  Pandemic Volunteers
+                <%= t(".brand") %>
               </a>
             </h3>
             <nav class="nav nav-masthead pt-2 justify-content-center">
-              <a class="nav-link red-link mr-3 <%= 'active' if current_page?(controller: 'hospitals') %>" href="/hospitals">Hospitals</a>
-              <a class="nav-link red-link mx-3 <%= 'active' if current_page?(controller: 'partners') %>" href="/partners">Partners</a>
-              <a class="nav-link red-link ml-3" href="https://www.notion.so/Pandemic-Volunteers-cf5a155708614c3fa77f00d93bdd02a1" target="_blank">FAQ</a>
+              <a class="nav-link red-link mr-3 <%= 'active' if current_page?(controller: 'hospitals') %>" href="/hospitals">
+                <%= t(".hospitals_nav_link") %>
+              </a>
+              <a class="nav-link red-link mx-3 <%= 'active' if current_page?(controller: 'partners') %>" href="/partners">
+                <%= t(".partners_nav_link") %>
+              </a>
+              <a class="nav-link red-link ml-3" href="https://www.notion.so/Pandemic-Volunteers-cf5a155708614c3fa77f00d93bdd02a1" target="_blank">
+                <%= t(".faq_nav_link") %>
+                </a>
             </nav>
           </div>
         </div>
@@ -57,24 +63,24 @@
                 <div class="row my-2">
                   <p class="w-100 m-auto text-muted">
                     <small>
-                      Pandemic Volunteers is an international humanitarian medical NGO in the works.
+                      <%= t(".footer.text") %>
                     </small>
                   </p>
                   <p class="w-100 m-auto mx-3">
                     <small>
                       <strong class="mr-4">
                         <a class="text-dark" href="https://www.notion.so/Pandemic-Volunteers-cf5a155708614c3fa77f00d93bdd02a1" target="_blank">
-                          About Pandemic Volunteers
+                          <%=t(".footer.about") %>
                         </a>
                       </strong>
                       <strong>
                         <a class="text-dark" href="#">
-                          Terms of Service
+                          <%= t(".footer.terms") %>
                         </a>
                       </strong>
                       <strong class="ml-4">
-                        <a class="text-dark" href="/privacy">
-                          Privacy Policy
+                        <a class="text-dark" href="#">
+                          <%= t(".footer.privacy") %>
                         </a>
                       </strong>
                     </small>
@@ -96,7 +102,7 @@
                     <a href="https://medium.com/@PandemicVolntrs" target="_blank" class="text-dark link-no-underline">
                       <i class="fab fa-medium fa-2x mx-2"></i>
                     </a>
-                    <a href="https://github.com/hantuzun/pandemic-volunteers/blob/master/README.md" target="_blank" class="text-dark link-no-underline">
+                    <a href="https://github.com/panvol/pandemic-volunteers/blob/master/README.md" target="_blank" class="text-dark link-no-underline">
                       <i class="fab fa-github fa-2x ml-2"></i>
                     </a>
                   </p>
