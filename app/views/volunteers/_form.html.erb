@@ -1,5 +1,5 @@
 <%= simple_form_for volunteer, url: '/#apply', method: :post do |f| %>
-  <%= f.input :country, collection: countries, label: false,  :selected => 'US'%>
+  <%= f.input :country, label: false, collection: countries, :selected => 'US'%>
 
   <%= f.input :state, label: false, collection: states, :selected => 'NY' %>
 
@@ -9,9 +9,9 @@
 
   <%= f.input :email, label: false, input_html: { autocomplete: 'email' }, input_html: {minlength: 7, oninvalid: "this.setCustomValidity('What is your email address?')", oninput: "setCustomValidity('')"} %>
 
-  <%= f.input :phone, label: false, input_html: { autocomplete: 'tel' }, input_html: {minlength: 7, oninvalid: "setCustomValidity('What is your phone number?')", oninput: "setCustomValidity('')"} %>
+  <%= f.input :phone, label: false, input_html: { autocomplete: 'tel' }, input_html: {minlength: 4, oninvalid: "setCustomValidity('What is your phone number?')", oninput: "setCustomValidity('')"} %>
 
-  <%= f.input :crew, collection: volunteer_crews, prompt: "Choose what can you help with", label: false %>
+  <%= f.input :crew, label: false, collection: volunteer_crews, prompt: "Choose what can you help with" %>
 
   <%= f.input :about, label: false, as: :text, input_html: {minlength: 20, oninvalid: "setCustomValidity('How would you like to help?')", oninput: "setCustomValidity('')"} %>
 
