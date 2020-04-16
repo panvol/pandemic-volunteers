@@ -1,5 +1,5 @@
 <div align="center" style="object-fit: contain">
-    <img src="./app/assets/images/opengraph/image.png"/>
+    <img src="./public/readme/header.png"/>
 </div>
 
 # ⚠️ Help Wanted
