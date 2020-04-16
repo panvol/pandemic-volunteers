@@ -105,6 +105,11 @@ $ rails db:migrate
 
 Visit http://localhost:3000
 
+## Test
+
+```sh
+bundle exec rspec
+```
 
 ## Deployment
 
