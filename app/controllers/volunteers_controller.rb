@@ -7,10 +7,10 @@ class VolunteersController < ApplicationController
 
     if @volunteer.save
       VolunteerNotifierMailer.send_registration_email(@volunteer).deliver_later
-      flash.notice = '<i class="fas fa-heart mr-1"></i> Thanks! We will contact you soon'
+      flash.notice = '<i class="fas fa-heart mr-1"></i> ' + t("volunteers.form.messages.success")
       redirect_to '/' and return
     else
-      flash.now.alert = '<i class="fas fa-exclamation-triangle mr-1"></i> Could not be saved'
+      flash.now.alert = '<i class="fas fa-exclamation-triangle mr-1"></i> ' + t("volunteers.form.messages.error")
       render :template => 'home/index' and return
     end
   end

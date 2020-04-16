@@ -30,7 +30,6 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
   activerecord:
     errors:
       models:
@@ -40,4 +39,105 @@ en:
               invalid: "is not a valid email address."
             phone:
               invalid: "is not a valid phone number."
-
+  layouts:
+    application:
+      brand: "Pandemic Volunteers"
+      hospitals_nav_link: "Hospitals"
+      partners_nav_link: "Partners"
+      faq_nav_link: "FAQ"
+      footer:
+        text: "Pandemic Volunteers is an international humanitarian medical NGO in the works."
+        about: "About"
+        terms: "Terms and Conditions"
+        privacy: "Privacy Policy"
+  home:
+    index:
+      hero:
+        header:
+          before_underline: "You can save "
+          underline: "lives"
+          after_underline: "."
+        text: "Help tackle the coronavirus pandemic."
+        cta: "Volunteer"
+      intro:
+        header:
+          before_bold: ""
+          bold: "Pandemic Volunteers"
+          after_bold: "is a global network of local volunteering crews"
+        text: "Help your neighbor better with the support of more team members, guidelines and backing of local coordination crews."
+      mobile_badge: "mobile"
+      remote_badge: "remote"
+      coming_soon_badge: "coming soon"
+      requires_credentials_badge: "requires credentials"
+      requires_immunity_badge: "requires immunity"
+      at_hospitals_badge: "at hospitals"
+      aid_crews_title: "Aid Crews"
+      aid_crews_description: "Doctors and nurses don’t only care for their patients, but also their children, parents, and pets. Take care of healthcare workers by volunteering to check in on their loved ones. We need them, and they need you."
+      elderly_crews_title: "Elderly Crews"
+      elderly_crews_description: "Think of a very transmissive virus just like SARS-CoV-2 but much more deadly. This is what your elderly neighbors deal with. They need your help to survive this pandemic. Assist them with simple tasks like shopping. Do not expose them to even a minor risk by disinfecting every item you hand to them."
+      coordination_crews_title: "Coordination Crews"
+      coordination_crews_description: "Help us coordinate your local crews. Conduct interviews of new applicants. Answer local crews support requests. Connect us with local hospitals and partners. Even a few hours a week can help us achieve our mission of mobilizing millions of volunteers globally."
+      research_ambassadors_title: "Research Ambassadors"
+      research_ambassadors_description: "There are around 140 studies published about COVID-19 every day. Applying the insights from these studies are crucial in determining the best treatments. Reach out to your local hospital and create a chat group with their busy doctors. Inform them about the latest actionable guidelines we curate. Direct their questions to our team."
+      triage_crews_title: "Triage Crews"
+      triage_crews_description: "COVID-19 patients with mild symptoms are instructed to treat themselves at home. Most of them are unable to judge their condition and lack the required knowledge not to infect their households. Read our required guidelines and use online triage tools to help patients on evaluating their conditions with video or phone calls."
+      hospital_crews_title: "Hospital Crews"
+      hospital_crews_description: "Nurses and other hospital staff work 24/7 at this moment. This unsustainable work demand decreases the quality of medical care and costs lives. Join a group of volunteers at your local hospital to help medical staff. Ease the lives of the heroes of our time. Disinfect personal protective equipment. Help with logistics."
+      section-titles:
+        steps: "Steps ahead"
+        roles: "Available roles"
+        form: "Join the fight now!"
+      steps:
+        1: "Apply for volunteering"
+        2: "Introductory call"
+        3: "Read the given guidelines"
+        4: "Start volunteering" 
+      form:
+        header: "Apply for volunteering"
+  volunteers:
+    form:
+      defaults:
+        crew_collection: "Choose a role"
+      errors:
+        name: "What is your name?"
+        email: "What is your email address?"
+        phone: "What is your phone number?"
+        about: "How would you like to help?"
+      cta: "Apply"
+      messages:
+        success: "Thank you — we will contact you in 48 hours!"
+        error: "Could not be saved!"
+  hospitals:
+    index:
+      header: "Does your hospital need help?"
+      subheader: "Let us bring volunteers to your institution."
+      form:
+        header: "Register your hospital"
+        cta: "Register"
+        defaults:
+          country: "Choose your country"
+          hospital_name: "Hospital name"
+          contact_name: "Contact name"
+          contact_email: "Contact email"
+        messages:
+          success: "Thank you — we will contact you in 48 hours!"
+          error: "Could not be saved!"
+  partners:
+    index:
+      header: "Let's work together."
+      subheader: "Let us connect your organization with our volunteers."
+      form:
+        header: "Register as a partner"
+        cta: "Register"
+        defaults:
+          country: "Choose your country"
+        errors:
+          organization_name: "What is your organization name?"
+          organization_about: "What does your organization do?"
+          organization_type: "Choose your organization type"
+          staff_name: "What is your name?"
+          staff_email: "What is your email?"
+          staff_role: "What is your role at your organization?"
+        messages:
+          success: "Thank you — we will contact you in 48 hours!"
+          error: "Could not be saved!"

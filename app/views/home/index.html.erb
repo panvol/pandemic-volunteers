@@ -4,12 +4,14 @@
 </div>
 
 <div class="text-center container pt-5">
-  <p class="cover-heading font-weight-900">You can save <span class="lives">lives</span>. </p>
+  <p class="cover-heading font-weight-900">
+    <%= t(".hero.header.before_underline") %><span class="lives"><%= t(".hero.header.underline") %></span><%= t(".hero.header.after_underline") %>
+  </p>
   <p class="cover-lead">
-    Help tackle the coronavirus pandemic.
+    <%= t(".hero.text") %>
   </p>
   <a role="button" class="btn btn-danger btn-lg px-4 mt-3 mb-5 shadow" href="#apply">
-    Volunteer
+    <%= t(".hero.cta") %>
   </a>
 </div>
 
@@ -26,22 +28,23 @@
   </div>
   <div class="col-md-12">
     <p class="section-title text-center">
-      <span class="font-weight-bold"> Pandemic Volunteers </span>
-      is a global network of local volunteering crews
+      <%= t(".intro.header.before_bold") %>
+      <span class="font-weight-bold"> <%= t(".intro.header.bold") %> </span>
+      <%= t(".intro.header.after_bold") %>
     </p>
   </div>
 </div>
 
 <div class="text-center container pb-4">
   <p class="cover-lead">
-    Help your neighbor better with the support of more team members, guidelines and backing of local coordination crews.
+    <%= t(".intro.text") %>
   </p>
 </div>
 
-<div class="row pt-5 mt-5 mb-2 mx-0">
+<div class="row pt-5 mt-5 mb-5 mx-0">
   <div class="col-md-12">
     <p class="section-title text-center">
-      Steps ahead
+      <%= t(".section-titles.steps") %>
     </p>
   </div>
 </div>
@@ -51,21 +54,21 @@
     <p class="cover-lead">
       <i class="fas fa-dot-circle mr-2"></i>
       <a class="red-link" href="#apply">
-        Apply for volunteering
+        <%= t(".steps.1") %>
         <i class="fas fa-arrow-right ml-2"></i>
       </a>
     </p>
     <p class="cover-lead text-secondary">
       <i class="fas fa-circle mr-2 text-secondary"></i>
-      Introductory call
+      <%= t(".steps.2") %>
     </p>
     <p class="cover-lead text-secondary">
       <i class="fas fa-circle mr-2 text-secondary"></i>
-      Read the given guidelines
+      <%= t(".steps.3") %>
     </p>
     <p class="cover-lead text-secondary">
       <i class="fas fa-circle mr-2 text-secondary"></i>
-      Start volunteering
+      <%= t(".steps.4") %>
     </p>
   </div>
   <div class="col-md-4 d-flex text-center justify-content-center">
@@ -73,158 +76,60 @@
   </div>
 </div>
 
-<div class="row pt-5 mt-5 mb-2 mx-0">
+<div class="row pt-5 mt-5 mx-0">
   <div class="col-md-12">
     <p class="section-title text-center">
-      Available roles
+      <%= t(".section-titles.roles") %>
     </p>
   </div>
 </div>
 
-<div class="row mb-5 mx-0">
-  <div class="col-md-4 d-flex text-center justify-content-center">
-    <%= inline_svg_tag "graphics/home/undraw_collab_8oes_modified.svg", size: '200', class: 'm-auto' %>
-  </div>
-  <div class="col-md-8">
-    <p class="cover-lead font-weight-bold">
-      <span class="align-middle">
-        Elderly Crews
-      </span>
-      </br>
-      <span style="font-size: 10pt" class="badge badge-primary align-middle">
-        <i class="fas fa-walking"></i>
-        mobile
-      </span>
-    </p>
-    <p>
-      Think of a very transmissive virus just like SARS-CoV-2 but much more deadly. This is what your elderly neighbors deal with. They need your help to survive this pandemic. Assist them with simple tasks like shopping. Do not expose them to even a minor risk by disinfecting every item you hand to them.
-    </p>
-  </div>
-</div>
+<%= render partial: "home/blob", locals: {
+  title:  t(".elderly_crews_title"),
+  description:  t(".elderly_crews_description"),
+  hero_image_name: "undraw_collab_8oes_modified",
+  badges: [:mobile],
+} %>
 
-<div class="row my-5 mx-0">
-  <div class="col-md-4 d-flex text-center justify-content-center">
-    <%= inline_svg_tag "graphics/home/undraw_conference_call_b0w6.svg", size: '200', class: 'm-auto' %>
-  </div>
-  <div class="col-md-8">
-    <p class="cover-lead font-weight-bold">
-      <span class="align-middle">Coordination Crews</span>
-      </br>
-      <span style="font-size: 10pt" class="badge badge-success align-middle">
-        <i class="fas fa-laptop"></i>
-        remote
-      </span>
-    </p>
-    <p>
-      Help us coordinate your local crews. Conduct interviews of new applicants. Answer local crews support requests. Connect us with local hospitals and partners. Even a few hours a week can help us achieve our mission of mobilizing millions of volunteers globally.
-    </p>
-  </div>
-</div>
+<%= render partial: "home/blob", locals: {
+  title:  t(".coordination_crews_title"),
+  description:  t(".coordination_crews_description"),
+  hero_image_name: "undraw_conference_call_b0w6",
+  badges: [:remote],
+} %>
 
-<div class="row my-5 mx-0">
-  <div class="col-md-4 d-flex text-center justify-content-center">
-    <%= inline_svg_tag "graphics/home/undraw_baby_ja7a.svg", size: '200', class: 'm-auto' %>
-  </div>
-  <div class="col-md-8">
-    <p class="cover-lead font-weight-bold">
-      <span class="align-middle">
-        Aid Crews
-      </span>
-      </br>
-      <span style="font-size: 10pt" class="badge badge-primary align-middle">
-        <i class="fas fa-walking"></i>
-        mobile
-      </span>
-      <span style="font-size: 10pt" class="badge badge-secondary align-middle">
-        coming soon
-      </span>
-    </p>
-    <p>
-      Doctors and nurses don’t only care for their patients, but also their children, parents, and pets. Take care of healthcare workers by volunteering to check in on their loved ones. We need them, and they need you.
-    </p>
-  </div>
-</div>
+<%= render partial: "home/blob", locals: {
+  title:  t(".aid_crews_title"),
+  description:  t(".aid_crews_description"),
+  hero_image_name: "undraw_baby_ja7a",
+  badges: [:mobile, :coming_soon],
+} %>
 
-<div class="row my-5 mx-0">
-  <div class="col-md-4 d-flex text-center justify-content-center">
-    <%= inline_svg_tag "graphics/home/undraw_video_call_kxyp.svg", size: '200', class: 'm-auto' %>
-  </div>
-  <div class="col-md-8">
-    <p class="cover-lead font-weight-bold">
-      <span class="align-middle">Triage Crews</span>
-      </br>
-      <span style="font-size: 10pt" class="badge badge-success align-middle">
-        <i class="fas fa-laptop"></i>
-        remote
-      </span>
-      <span style="font-size: 10pt" class="badge badge-secondary align-middle">
-        coming soon
-      </span>
-    </p>
-    <p>
-      COVID-19 patients with mild symptoms are instructed to treat themselves at home. Most of them are unable to judge their condition and lack the required knowledge not to infect their households. Read our required guidelines and use online triage tools to help patients on evaluating their conditions with video or phone calls.
-    </p>
-  </div>
-</div>
+<%= render partial: "home/blob", locals: {
+  title:  t(".triage_crews_title"),
+  description:  t(".triage_crews_description"),
+  hero_image_name: "undraw_video_call_kxyp",
+  badges: [:remote, :coming_soon],
+} %>
 
-<div class="row my-5 mx-0">
-  <div class="col-md-4 d-flex text-center justify-content-center">
-    <%= inline_svg_tag "graphics/home/undraw_doctors_hwty.svg", size: '200', class: 'm-auto' %>
-  </div>
-  <div class="col-md-8">
-    <p class="cover-lead font-weight-bold">
-      <span class="align-middle">Hospital Crews</span>
-      </br>
-      <span style="font-size: 10pt" class="badge badge-info align-middle">
-        <i class="fas fa-h-square"></i>
-        at hospitals
-      </span>
-      <span style="font-size: 10pt" class="badge badge-danger align-middle">
-        <i class="fas fa-shield-virus"></i>
-        requires immunity
-      </span>
-      <span style="font-size: 10pt" class="badge badge-secondary align-middle">
-        coming soon
-      </span>
-    </p>
-    <p>
-      Nurses and other hospital staff work 24/7 at this moment. This unsustainable work demand decreases the quality of medical care and costs lives. Join a group of volunteers at your local hospital to help medical staff. Ease the lives of the heroes of our time. Disinfect personal protective equipment. Help with logistics.
-    </p>
-  </div>
-</div>
+<%= render partial: "home/blob", locals: {
+  title:  t(".hospital_crews_title"),
+  description:  t(".hospital_crews_description"),
+  hero_image_name: "undraw_doctors_hwty",
+  badges: [:at_hospitals, :requires_immunity, :coming_soon],
+} %>
 
-<div class="row my-5 mx-0">
-  <div class="col-md-4 d-flex text-center justify-content-center">
-    <%= inline_svg_tag "graphics/home/undraw_medical_research_qg4d.svg", size: '200', class: 'm-auto' %>
-  </div>
-  <div class="col-md-8">
-    <p class="cover-lead font-weight-bold">
-      <span class="align-middle">
-        Research Ambassadors
-      </span>
-      </br>
-      <span style="font-size: 10pt" class="badge badge-success align-middle">
-        <i class="fas fa-laptop"></i>
-        remote
-      </span>
-      <span style="font-size: 10pt" class="badge badge-dark align-middle">
-        <i class="fas fa-graduation-cap"></i>
-        requires credentials
-      </span>
-      <span style="font-size: 10pt" class="badge badge-secondary align-middle">
-        coming soon
-      </span>
-    </p>
-    <p>
-      There are around 140 studies published about COVID-19 every day. Applying the insights from these studies are crucial in determining the best treatments. Reach out to your local hospital and create a chat group with their busy doctors. Inform them about the latest actionable guidelines we curate. Direct their questions to our team.
-    </p>
-  </div>
-</div>
+<%= render partial: "home/blob", locals: {
+  title:  t(".research_ambassadors_title"),
+  description:  t(".research_ambassadors_description"),
+  hero_image_name: "undraw_medical_research_qg4d",
+  badges: [:remote, :requires_credentials, :coming_soon],
+} %>
 
-<div class="row pt-5 mt-5 mb-2 mx-0">
+<div class="row pt-5 mt-5 mb-5 mx-0">
   <div class="col-md-12">
     <p class="section-title text-center">
-      Join the fight now!
+      <%= t(".section-titles.form") %>
     </p>
   </div>
 </div>
@@ -234,7 +139,9 @@
     <div id="apply" class="card shadow">
       <div class="card-header d-flex align-items-center justify-content-between pb-0">
         <div class="cover-lead font-weight-bold">
-          <p>Apply for volunteering</p>
+          <p>
+            <%= t(".form.header") %>
+          </p>
         </div>
       </div>
       <div class="card-body bg-light">

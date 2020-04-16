@@ -1,21 +1,79 @@
 <%= simple_form_for volunteer, url: '/#apply', method: :post do |f| %>
-  <%= f.input :country, label: false, collection: countries, :selected => 'US'%>
+  <%= f.input :country,
+    label: false,
+    collection: countries,
+    :selected => 'US'
+  %>
 
-  <%= f.input :state, label: false, collection: states, :selected => 'NY' %>
+  <%= f.input :state,
+    label: false,
+    collection: states,
+    :selected => 'NY'
+  %>
 
-  <%= f.input :city, label: false, collection: cities, :selected => 'New York' %>
+  <%= f.input :city,
+    label: false,
+    collection: cities,
+    :selected => 'New York'
+  %>
 
-  <%= f.input :name, label: false, required: true, input_html: {oninvalid: "this.setCustomValidity('What is your name?')", oninput: "setCustomValidity('')"} %>
+  <%= f.input :name,
+    label: false,
+    required: true,
+    input_html: {
+      oninvalid: "this.setCustomValidity('#{t('.errors.name')}')",
+      oninput: "setCustomValidity('')"
+    }
+  %>
 
-  <%= f.input :email, label: false, input_html: { autocomplete: 'email' }, input_html: {minlength: 7, oninvalid: "this.setCustomValidity('What is your email address?')", oninput: "setCustomValidity('')"} %>
+  <%= f.input :email,
+    label: false,
+    required: true,
+    input_html: {
+      autocomplete: 'email',
+      minlength: 7,
+      oninvalid: "this.setCustomValidity('#{t('.errors.email')}')",
+      oninput: "setCustomValidity('')"
+    }
+  %>
 
-  <%= f.input :phone, label: false, input_html: { autocomplete: 'tel' }, input_html: {minlength: 4, oninvalid: "setCustomValidity('What is your phone number?')", oninput: "setCustomValidity('')"} %>
+  <%= f.input :phone,
+    label: false,
+    required: true,
+    input_html: {
+      autocomplete: 'tel',
+      minlength: 4,
+      oninvalid: "this.setCustomValidity('#{t('.errors.phone')}')",
+      oninput: "setCustomValidity('')"
+    }
+  %>
 
-  <%= f.input :crew, label: false, collection: volunteer_crews, prompt: "Choose what can you help with" %>
+  <%= f.input :crew,
+    label: false,
+    collection: volunteer_crews,
+    prompt: t(".defaults.crew_collection")
+  %>
 
-  <%= f.input :about, label: false, as: :text, input_html: {minlength: 20, oninvalid: "setCustomValidity('How would you like to help?')", oninput: "setCustomValidity('')"} %>
+  <%= f.input :about,
+    label: false,
+    required: true,
+    as: :text,
+    input_html: {
+      minlength: 20,
+      oninvalid: "this.setCustomValidity('#{t('.errors.about')}')",
+      oninput: "setCustomValidity('')"
+    }
+  %>
 
-  <%= f.input :immunity, as: :radio_buttons, :collection => [ ['Yes', true], ['No', false] ], :checked => ['No', false] %>
+  <%= f.input :immunity,
+    as: :radio_buttons,
+    :collection => [ ['Yes', true], ['No', false] ],
+    :checked => ['No', false]
+  %>
 
-  <%= f.button :submit, "Apply", id: 'volunteer_submit', class: "btn-danger btn-block btn-lg font-weight-bold shadow" %>
+  <%= f.button :submit,
+    t(".cta"),
+    id: 'volunteer_submit',
+    class: "btn-danger btn-block btn-lg font-weight-bold shadow"
+  %>
 <% end %>
