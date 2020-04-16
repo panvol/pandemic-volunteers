@@ -1,5 +1,5 @@
-<%= javascript_pack_tag 'notie', 'data-turbolinks-track': 'reload' %>
-<%= stylesheet_pack_tag 'notie', 'data-turbolinks-track': 'reload' %>
+<%= javascript_pack_tag 'notie', 'data-turbolinks-track': 'reload', defer: true %>
+<%= stylesheet_pack_tag 'notie', 'data-turbolinks-track': 'reload', async: true %>
 
 <%= content_tag(:script) do %>
   <% flash.each do |type, message| %>
