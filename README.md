@@ -52,17 +52,17 @@ $ git clone https://github.com/your-account/pandemic-volunteers
 $ cd pandemic-volunteers
 ```
 
-### Install Ruby 2.7.0
+### Install Ruby 2.7.1
 
 ```sh
-$ rvm install 2.7.0
+$ rvm install 2.7.1
 
-$ rvm use --default 2.7.0
+$ rvm use --default 2.7.1
 
 $ ruby --version
 ```
 
-Your ruby version output should begin with `ruby 2.7.0`.
+Your ruby version output should begin with `ruby 2.7.1`.
 
 
 ### Install required dependencies
