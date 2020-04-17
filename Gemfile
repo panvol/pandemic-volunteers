@@ -33,6 +33,7 @@ gem 'country_state_select', '>= 3.0.5'
 gem 'simple_form', '>= 5.0.2'
 gem 'bootstrap', '~>4.3.1'
 gem 'inline_svg', '>= 1.7.1'
+gem 'kramdown', '~> 1.8', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
