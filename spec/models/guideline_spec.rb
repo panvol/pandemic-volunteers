@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe GuidelinesPresenter do
+RSpec.describe Guideline do
   it "returns a list of guidelines based on locale" do
     expect(presenter.categories).not_to be_empty
   end

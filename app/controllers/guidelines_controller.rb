@@ -1,5 +1,5 @@
 class GuidelinesController < ApplicationController
   def index
-    @guidelines = GuidelinesPresenter.new(locale)
+    @guidelines = Guideline.new(locale)
   end
 end

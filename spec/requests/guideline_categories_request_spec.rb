@@ -1,8 +1,8 @@
 require "rails_helper"
 
 RSpec.describe "/guidelines", type: :request do
-  let(:locale) { :en }
   it "returns a 200 " do
+    locale = :en
     get "/#{locale}/guidelines"
 
     expect(response.status).to eq(200)
@@ -10,7 +10,7 @@ RSpec.describe "/guidelines", type: :request do
 
   it "returns page metadata" do
     locale = :en
-    presenter = GuidelinesPresenter.new(locale)
+    presenter = Guideline.new(locale)
     get "/#{locale}/guidelines"
 
     expect(response.body).to include presenter.title
@@ -19,7 +19,7 @@ RSpec.describe "/guidelines", type: :request do
 
   it "returns a list of guidelines" do
     locale = :en
-    categories = GuidelinesPresenter.new(locale).categories
+    categories = Guideline.new(locale).categories
     get "/#{locale}/guidelines"
 
     expect(response.body).to include categories.first.title

@@ -1,4 +1,4 @@
-class GuidelinesPresenter
+class Guideline
   ROOT_PATH = Rails.root.join("lib/markdown").freeze
   METADATA_FILE_NAME = "metadata.yml".freeze
 
