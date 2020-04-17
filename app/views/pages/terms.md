@@ -1,23 +1,19 @@
-
 # Table of Contents
 
--   [1. Agreement to Terms](#org9c5d8a0)
--   [2. Acceptable Use](#org28144f7)
--   [3. Our content](#orgddf5936)
--   [4. Site Management](#orgbe98e99)
--   [5. Modifications to and availability of the Site](#orgb5790ed)
--   [6. Disclaimer/Limitation of Liability](#orgbe1ceb6)
--   [7 Term and Termination](#orgaa14285)
--   [8. General](#org81bfa49)
+1. [Agreement to Terms](#agreement-to-terms)
+2. [Acceptable Use](#acceptable-use)
+3. [Our Content](#our-content)
+4. [Site Management](#site-management)
+5. [Modification and Availability of the Site](#modification-and-availability-of-the-site)
+6. [Disclaimer and Limitation of Liability](#disclaimer-and-limitation-of-liability)
+7. [Term and Termination](#term-and-termination)
+8. [General](#general)
 
 **Last Updated 16 April 2020**
 
-
-<a id="org9c5d8a0"></a>
-
 # 1. Agreement to Terms
 
-1.1 These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity (**you**), and **Pandemic Volunteers**, \*located at **Dr. Esat Isik St. 47/7, Istanbul, Turkey** (**we**, **us**), concerning your access to and use of the **Pandemic Volunteers** **[[https://pandemicvolunteers.org/](https://PandemicVolunteers.org))** website as well as any related applications (the **Site**).
+1.1 These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity (**you**), and **Pandemic Volunteers**, \*located at **Dr. Esat Isik St. 47/7, Istanbul, Turkey** (**we**, **us**), concerning your access to and use of the **Pandemic Volunteers** **[PandemicVolunteers.org](https://PandemicVolunteers.org))** website as well as any related applications (the **Site**).
 
 The Site provides the following services: **A global volunteering initiative against pandemics.** (**Services**). You agree that by accessing the Site and/or Services, you have read,
 understood, and agree to be bound by all of these Terms and Conditions.
@@ -49,12 +45,10 @@ use the Services without parental permission.
 
 1.7 Additional policies which also apply to your use of the Site include:
 
-**●** Our Privacy Notice [https://PandemicVolunteers.org/privacy](https://pandemicvolunteers.org/privacy), which sets out the terms on which we process any personal data we
+ * Our Privacy Notice [PandemicVolunteers.org/privacy](https://PandemicVolunteers.org/privacy), which sets out the terms on which we process any personal data we
 collect from you, or that you provide to us. By using the Site, you
 consent to such processing and you warrant that all data provided by you is accurate.
 
-
-<a id="org28144f7"></a>
 
 # 2. Acceptable Use
 
@@ -65,71 +59,69 @@ specifically endorsed or approved by us.
 
 2.2 As a user of this Site, you agree not to:
 
-**●** Systematically retrieve data or other content from the Site to a compile database or
+ * Systematically retrieve data or other content from the Site to a compile database or
 directory without written permission from us
 
-**●** Make any unauthorized use of the Site, including collecting usernames and/or email addresses of users to send unsolicited email or creating user
+ * Make any unauthorized use of the Site, including collecting usernames and/or email addresses of users to send unsolicited email or creating user
 accounts under false pretenses
 
-**●** Use the Site to advertise or sell goods and services
+ * Use the Site to advertise or sell goods and services
 
-**●** Circumvent, disable, or otherwise interfere with security-related features of the
+ * Circumvent, disable, or otherwise interfere with security-related features of the
 Site, including features that prevent or restrict the use or copying of
 any content or enforce limitations on the use
 
-**●** Engage in unauthorized framing of or linking to the Site
+ * Engage in unauthorized framing of or linking to the Site
 
-**●** Trick, defraud, or mislead us and other users, especially in any attempt to
+ * Trick, defraud, or mislead us and other users, especially in any attempt to
 learn sensitive account information such as user passwords
 
-**●** Make improper use of our support services, or submit false reports of abuse or misconduct
+ * Make improper use of our support services, or submit false reports of abuse or misconduct
 
-**●** Engage in any automated use of the system, such as using scripts to send
+ * Engage in any automated use of the system, such as using scripts to send
 comments or messages, or using any data mining, robots, or similar data
 gathering and extraction tools
 
-**●** Interfere with, disrupt, or create an undue burden on the Site or the networks and services connected to the Site
+ * Interfere with, disrupt, or create an undue burden on the Site or the networks and services connected to the Site
 
-\*●\* Attempt to impersonate another user or person, or use the username of another user
+ * Attempt to impersonate another user or person, or use the username of another user
 
-\*●\* Sell or otherwise transfer your profile
+ * Sell or otherwise transfer your profile
 
-\*●\* Use any information obtained from the Site in order to harass, abuse, or harm another person
+ * Use any information obtained from the Site in order to harass, abuse, or harm another person
 
-\*●\* Use the Site or our content as part of any effort to compete with us or to
+ * Use the Site or our content as part of any effort to compete with us or to
 create a revenue-generating endeavor or commercial enterprise
 
-\*●\* Decipher, decompile, disassemble, or reverse engineer any of the software comprising or in any way making up a part of the Site
+ * Decipher, decompile, disassemble, or reverse engineer any of the software comprising or in any way making up a part of the Site
 
-\*●\* Attempt to access any portions of the Site that you are restricted from accessing
+ * Attempt to access any portions of the Site that you are restricted from accessing
 
-\*●\* Harass, annoy, intimidate, or threaten any of our employees, agents, or other users
+ * Harass, annoy, intimidate, or threaten any of our employees, agents, or other users
 
-\*●\* Delete the copyright or other proprietary rights notice from any of the content
+ * Delete the copyright or other proprietary rights notice from any of the content
 
-\*●\* Upload or transmit (or attempt to upload or to transmit) viruses, Trojan
+ * Upload or transmit (or attempt to upload or to transmit) viruses, Trojan
 horses, or other material that interferes with any party’s uninterrupted use and enjoyment of the Site, or any material that acts as a passive
 or active information collection or transmission mechanism
 
-\*●\* Use, launch, or engage in any automated use of the system, such as using
+ * Use, launch, or engage in any automated use of the system, such as using
 scripts to send comments or messages, robots, scrapers, offline readers, or similar data gathering and extraction tools
 
-\*●\* Disparage, tarnish, or otherwise harm, in our opinion, us and/or the Site
+ * Disparage, tarnish, or otherwise harm, in our opinion, us and/or the Site
 
-\*●\* Use the Site in a manner inconsistent with any applicable laws or regulations
+ * Use the Site in a manner inconsistent with any applicable laws or regulations
 
-\*●\* Threaten users with negative feedback or offering services solely to give positive feedback to users
+ * Threaten users with negative feedback or offering services solely to give positive feedback to users
 
-\*●\* Misrepresent experience, skills, or information about a User
+ * Misrepresent experience, skills, or information about a User
 
-\*●\* Advertise products or services not intended by us
+ * Advertise products or services not intended by us
 
-\*●\* Falsely imply a relationship with us or another company with whom you do not have a relationship
+ * Falsely imply a relationship with us or another company with whom you do not have a relationship
 
 
-<a id="orgddf5936"></a>
-
-# 3. Our content
+# 3. Our Content
 
 3.1 Unless otherwise indicated, the Site and Services including source code,
 databases, functionality, software, website designs, audio, video, text, photographs, and graphics on the Site (**Our Content**) are owned or licensed to us, and are protected by copyright and trade mark laws.
@@ -166,8 +158,6 @@ implied, that Our Content on the Site is accurate, complete or up to
 date.
 
 
-<a id="orgbe98e99"></a>
-
 # 4. Site Management
 
 4.1 We reserve the right at our sole discretion, to (1) monitor the Site for breaches of these Terms and Conditions; (2) take appropriate legal action against anyone in breach of applicable laws or these Terms and Conditions;  (3) remove from the Site or otherwise disable all files and content that
@@ -182,9 +172,7 @@ programs and platform to access the Site and you should use your own
 virus protection software.
 
 
-<a id="orgb5790ed"></a>
-
-# 5. Modifications to and availability of the Site
+# 5. Modification and Availability of the Site
 
 5.1 We reserve the right to change, modify, or remove the contents of the Site at any time or for any reason at our sole discretion without notice. We also reserve the right to modify or discontinue all or part of the
 Services without notice at any time.
@@ -204,9 +192,7 @@ reserve the right to correct any errors, inaccuracies, or omissions and
 to change or update the information at any time, without prior notice.
 
 
-<a id="orgbe1ceb6"></a>
-
-# 6. Disclaimer/Limitation of Liability
+# 6. Disclaimer and Limitation of Liability
 
 6.1 The Site and Services are provided on an as-is and as-available basis. You
 agree that your use of the Site and/or Services will be at your sole
@@ -233,12 +219,12 @@ reasonable control.
 
 **Whether you are a consumer or a business user:**
 
-\*●\* We do not exclude or limit in any way our liability to you where it would
+ * We do not exclude or limit in any way our liability to you where it would
 be unlawful to do so. This includes liability for death or personal
 injury caused by our negligence or the negligence of our employees,
 agents or subcontractors and for fraud or fraudulent misrepresentation.
 
-\*●\* If we fail to comply with these Terms and Conditions, we will be
+ * If we fail to comply with these Terms and Conditions, we will be
 responsible for loss or damage you suffer that is a foreseeable result
 of our breach of these Terms and Conditions, but we would not be
 responsible for any loss or damage that were not foreseeable at the time you started using the Site/Services.
@@ -255,47 +241,45 @@ We will not be liable to you for any loss or damage, whether in contract,
 tort (including negligence), breach of statutory duty, or otherwise,
 even if foreseeable, arising under or in connection with:
 
-\*●\* use of, or inability to use, our Site/Services; or
+ * use of, or inability to use, our Site/Services; or
 
-\*●\* use of or reliance on any content displayed on our Site.
+ * use of or reliance on any content displayed on our Site.
 
 In particular, we will not be liable for:
 
-\*●\* loss of profits, sales, business, or revenue;
+ * loss of profits, sales, business, or revenue;
 
-\*●\* business interruption;
+ * business interruption;
 
-\*●\* loss of anticipated savings;
+ * loss of anticipated savings;
 
-\*●\* loss of business opportunity, goodwill or reputation; or
+ * loss of business opportunity, goodwill or reputation; or
 
-\*●\* any indirect or consequential loss or damage.
+ * any indirect or consequential loss or damage.
 
 **If you are a consumer user:**
 
-\*●\* Please note that we only provide our Site for domestic and private use. You
+ * Please note that we only provide our Site for domestic and private use. You
 agree not to use our Site for any commercial or business purposes, and
 we have no liability to you for any loss of profit, loss of business,
 business interruption, or loss of business opportunity.
 
-\*●\* If defective digital content that we have supplied, damages a device or
+ * If defective digital content that we have supplied, damages a device or
 digital content belonging to you and this is caused by our failure to
 use reasonable care and skill, we will either repair the damage or pay
 you compensation.
 
-\*●\* You have legal rights in relation to goods that are faulty or not as
+ * You have legal rights in relation to goods that are faulty or not as
 described. Advice about your legal rights is available from your local
 Citizens' Advice Bureau or Trading Standards office. Nothing in these
 Terms and Conditions will affect these legal rights.
 
 
-<a id="orgaa14285"></a>
-
 # 7 Term and Termination
 
 7.1 These Terms and Conditions shall remain in full force and effect while you
 use the Site or Services or are otherwise a user of the Site, as
-applicable. You may terminate your use or participation at any time, for any reason, by following the instructions for terminating user accounts in your account settings, if available, or by contacting us at contact@pandemicvolunteers.org.
+applicable. You may terminate your use or participation at any time, for any reason, by following the instructions for terminating user accounts in your account settings, if available, or by contacting us at Contact@PandemicVolunteers.org.
 
 7.2 Without limiting any other provision of these Terms and Conditions, we reserve
 the right to, in our sole discretion and without notice or liability,
@@ -315,8 +299,6 @@ account under your name, a fake or borrowed name, or the name of any
 third party, even if you may be acting on behalf of the third party. In
 addition to terminating or suspending your account, we reserve the right to take appropriate legal action, including without limitation pursuing civil, criminal, and injunctive redress.
 
-
-<a id="org81bfa49"></a>
 
 # 8. General
 
@@ -346,7 +328,7 @@ agreement and understanding between you and us.
 
 8.7 There is no joint venture, partnership, employment or agency relationship created between you and us as a result of these Terms and Conditions or use of the Site or Services.
 
-8.8 In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us by email at contact@pandemicvolunteers.org or by post to:
+8.8 In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us by email at Contact@PandemicVolunteers.org or by post to:
 
 Pandemic Volunteers
 
@@ -356,5 +338,4 @@ Istanbul
 
 Turkey
 
-These terms of use were created using [Termly’s Terms and Conditions Generator](<https://termly.io/products/terms-and-conditions-generator/?ftseo>).
-
+These terms of use were created using Termly’s Terms and Conditions Generator.
