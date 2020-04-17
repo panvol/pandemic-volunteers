@@ -1,13 +1,13 @@
 # Table of Contents
 
-1. [Agreement to Terms](#agreement-to-terms)
-2. [Acceptable Use](#acceptable-use)
-3. [Our Content](#our-content)
-4. [Site Management](#site-management)
-5. [Modification and Availability of the Site](#modification-and-availability-of-the-site)
-6. [Disclaimer and Limitation of Liability](#disclaimer-and-limitation-of-liability)
-7. [Term and Termination](#term-and-termination)
-8. [General](#general)
+1. [Agreement to Terms](#1-agreement-to-terms)
+2. [Acceptable Use](#2-acceptable-use)
+3. [Our Content](#3-our-content)
+4. [Site Management](#4-site-management)
+5. [Modification and Availability of the Site](#5-modification-and-availability-of-the-site)
+6. [Disclaimer and Limitation of Liability](#6-disclaimer-and-limitation-of-liability)
+7. [Term and Termination](#7-term-and-termination)
+8. [General](#8-general)
 
 **Last Updated 16 April 2020**
 
