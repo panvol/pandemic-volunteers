@@ -15,4 +15,9 @@ Rails.application.routes.draw do
   get '/hospitals', to: 'hospitals#index'
 
   get '/privacy', to: 'pages#privacy'
+
+  scope "(:locale)", locale: /en|ja/ do
+    resources :guidelines, only: %I(index)
+    get "/guidelines/:category_name", to: "guideline_categories#index"
+  end
 end

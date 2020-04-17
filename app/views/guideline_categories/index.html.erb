@@ -1,0 +1,5 @@
+<%= render partial: "shared/guideline_index", locals: {
+  title: @category.title,
+  description: @category.description,
+  children: @categories.articles,
+} %>
