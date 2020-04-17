@@ -1,4 +1,8 @@
-# Table of Contents
+# Terms and Contiditions
+
+**Last Updated 16 April 2020**
+
+## Table of Contents
 
 1. [Agreement to Terms](#1-agreement-to-terms)
 2. [Acceptable Use](#2-acceptable-use)
@@ -9,9 +13,7 @@
 7. [Term and Termination](#7-term-and-termination)
 8. [General](#8-general)
 
-**Last Updated 16 April 2020**
-
-# 1. Agreement to Terms
+## 1. Agreement to Terms
 
 1.1 These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity (**you**), and **Pandemic Volunteers**, \*located at **Dr. Esat Isik St. 47/7, Istanbul, Turkey** (**we**, **us**), concerning your access to and use of the **Pandemic Volunteers** **[PandemicVolunteers.org](https://PandemicVolunteers.org))** website as well as any related applications (the **Site**).
 
@@ -50,7 +52,7 @@ collect from you, or that you provide to us. By using the Site, you
 consent to such processing and you warrant that all data provided by you is accurate.
 
 
-# 2. Acceptable Use
+## 2. Acceptable Use
 
 2.1 You may not access or use the Site for any purpose other than that for
 which we make the site and our services available. The Site may not be
@@ -121,7 +123,7 @@ scripts to send comments or messages, robots, scrapers, offline readers, or simi
  * Falsely imply a relationship with us or another company with whom you do not have a relationship
 
 
-# 3. Our Content
+## 3. Our Content
 
 3.1 Unless otherwise indicated, the Site and Services including source code,
 databases, functionality, software, website designs, audio, video, text, photographs, and graphics on the Site (**Our Content**) are owned or licensed to us, and are protected by copyright and trade mark laws.
@@ -158,7 +160,7 @@ implied, that Our Content on the Site is accurate, complete or up to
 date.
 
 
-# 4. Site Management
+## 4. Site Management
 
 4.1 We reserve the right at our sole discretion, to (1) monitor the Site for breaches of these Terms and Conditions; (2) take appropriate legal action against anyone in breach of applicable laws or these Terms and Conditions;  (3) remove from the Site or otherwise disable all files and content that
 are excessive in size or are in any way a burden to our systems; and (4) otherwise manage the Site in a manner designed to protect our rights
@@ -172,7 +174,7 @@ programs and platform to access the Site and you should use your own
 virus protection software.
 
 
-# 5. Modification and Availability of the Site
+## 5. Modification and Availability of the Site
 
 5.1 We reserve the right to change, modify, or remove the contents of the Site at any time or for any reason at our sole discretion without notice. We also reserve the right to modify or discontinue all or part of the
 Services without notice at any time.
@@ -192,7 +194,7 @@ reserve the right to correct any errors, inaccuracies, or omissions and
 to change or update the information at any time, without prior notice.
 
 
-# 6. Disclaimer and Limitation of Liability
+## 6. Disclaimer and Limitation of Liability
 
 6.1 The Site and Services are provided on an as-is and as-available basis. You
 agree that your use of the Site and/or Services will be at your sole
@@ -275,7 +277,7 @@ Citizens' Advice Bureau or Trading Standards office. Nothing in these
 Terms and Conditions will affect these legal rights.
 
 
-# 7 Term and Termination
+## 7 Term and Termination
 
 7.1 These Terms and Conditions shall remain in full force and effect while you
 use the Site or Services or are otherwise a user of the Site, as
@@ -300,7 +302,7 @@ third party, even if you may be acting on behalf of the third party. In
 addition to terminating or suspending your account, we reserve the right to take appropriate legal action, including without limitation pursuing civil, criminal, and injunctive redress.
 
 
-# 8. General
+## 8. General
 
 8.1 Visiting the Site, sending us emails, and completing online forms constitute
 electronic communications. You consent to receive electronic
@@ -328,7 +330,7 @@ agreement and understanding between you and us.
 
 8.7 There is no joint venture, partnership, employment or agency relationship created between you and us as a result of these Terms and Conditions or use of the Site or Services.
 
-8.8 In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us by email at Contact@PandemicVolunteers.org or by post to:
+8.8 In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us by email at [Contact@PandemicVolunteers.org](mailto:Contact@PandemicVolunteers.org) or by post to:
 
 Pandemic Volunteers
 

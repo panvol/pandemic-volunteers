@@ -1,6 +1,76 @@
 # Converts markdown files in $PAGES_PATH to partial files on server start
 
-redcarpet_renderer = Redcarpet::Render::HTML.new(with_toc_data: true)
+class CustomRender < Redcarpet::Render::HTML
+  def postprocess(full_document)
+    """
+    <div class='col-md-12'>
+      #{full_document}
+    </div>
+    """.html_safe
+  end
+
+  # Taken from https://github.com/vmg/redcarpet/issues/638
+  # This is annoying. Redcarpet implements this id generation logic in C, and
+  # AFAIK doesn't provide any hook for calling this method directly from Ruby.
+  # See C code here: https://github.com/vmg/redcarpet/blob/f441dec42a5097530328b20e9d5ed1a025c600f7/ext/redcarpet/html.c#L273-L319
+  def header_anchor(text)
+    Nokogiri::HTML(Redcarpet::Markdown.new(Redcarpet::Render::HTML.new(with_toc_data: true)).render("# #{text}")).css('h1')[0]["id"]
+  end
+
+  def anchorable(pretty_text, id = nil)
+    id ||= pretty_text.parameterize
+    """
+      <span id='#{id}' class='anchorable'>
+        #{pretty_text}
+        <a href='##{id}'><i class='fas fa-link text-light'></i></a>
+      </span>
+    """.html_safe
+  end
+
+  def header(text, header_level)
+    if header_level == 1
+      """
+      <div class='text-center container py-5'>
+        <p class='section-title font-weight-bold'>
+          #{text}
+        </p>
+      </div>
+      """.html_safe
+    else
+      if @options[:with_toc_data]
+        id = header_anchor(text)
+        text = anchorable(text, id)
+      end
+
+      """
+      <h#{header_level} class='mt-5'>
+        #{text}
+      </h#{header_level}>
+      """.html_safe
+    end
+  end
+
+  def doc_header
+    """
+    <div class='d-none d-md-block py-3'>
+      <!-- Vertical spacing for md and larger screens -->
+      <br>
+    </div>
+    """.html_safe
+  end
+
+  def doc_footer
+    """
+    <div class='d-none d-md-block py-3'>
+      <!-- Vertical spacing for md and larger screens -->
+      <br>
+    </div>
+    """.html_safe
+  end
+end
+
+redcarpet_renderer = CustomRender.new(with_toc_data: true)
+
 redcarpet_markdown = Redcarpet::Markdown.new(redcarpet_renderer, extensions = {})
 
 PAGES_PATH = 'app/views/pages/'
