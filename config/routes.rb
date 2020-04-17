@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   get '/privacy', to: 'pages#privacy'
 
-  scope "(:locale)", locale: /en|ja/ do
+  scope "(:locale)", locale: /en/ do
     resources :guidelines, only: %I(index)
     get "/guidelines/:category_name", to: "guideline_categories#index"
   end
