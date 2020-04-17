@@ -734,9 +734,6 @@ MigrationBackup/
 
 # End of https://www.gitignore.io/api/vim,ruby,rails,linux,macos,emacs,windows,rubymine,sublimetext,visualstudio
 
-/public/packs
-/public/packs-test
-/node_modules
-/yarn-error.log
-yarn-debug.log*
-.yarn-integrity
+# CUSTOM
+## Partials are supposed to be generated on server start with config/initializers/markdowns_to_partials.rb
+app/views/pages/partials
