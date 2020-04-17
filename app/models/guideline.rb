@@ -1,30 +1,22 @@
 class Guideline
   ROOT_PATH = Rails.root.join("lib/markdown").freeze
-  METADATA_FILE_NAME = "metadata.yml".freeze
+
+  attr_reader :title, :description
 
   def initialize(locale)
     @locale = locale
+    @metadata = GuidelinesMetadataExtractor.new(guidelines_path)
+    @title = metadata.title
+    @description = metadata.description
   end
 
   def categories
     guideline_dir_paths.map do |dir_path|
       GuidelineCategory.new(
         dir_path.to_s,
-        metadata(dir_path),
+        GuidelinesMetadataExtractor.new(dir_path),
       )
     end
-  end
-
-  def title
-    metadata(guidelines_path)[:title]
-  end
-
-  def description
-    metadata(guidelines_path)[:description]
-  end
-
-  def metadata(dir_path)
-    YAML::load_file(File.join(dir_path, METADATA_FILE_NAME)).symbolize_keys!
   end
 
   private
@@ -41,5 +33,5 @@ class Guideline
     "#{ROOT_PATH}/#{locale}/#{dir_name}"
   end
 
-  attr_reader :locale
+  attr_reader :locale, :metadata
 end

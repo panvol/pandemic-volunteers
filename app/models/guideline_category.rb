@@ -4,9 +4,9 @@ class GuidelineCategory
     @dir_path = dir_path
     @slug = extract_slug
     @position = extract_position
-    @title = metadata[:title]
-    @description = metadata[:description]
-    @svg_filename = metadata[:svg_filename]
+    @title = metadata.title
+    @description = metadata.description
+    @svg_filename = metadata.svg_filename
     @articles = []
   end
 

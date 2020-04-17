@@ -14,7 +14,7 @@ RSpec.describe Guideline do
     presenter.categories
     expect(GuidelineCategory).to have_received(:new).with(
       instance_of(String),
-      instance_of(Hash),
+      instance_of(GuidelinesMetadataExtractor),
     )
   end
 
