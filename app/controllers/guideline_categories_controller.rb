@@ -1,6 +1,6 @@
 class GuidelineCategoriesController < ApplicationController
   def index
-    @category =
+    @category = nil
   end
 
   def fetch_categories
