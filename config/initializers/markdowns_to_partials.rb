@@ -69,9 +69,17 @@ class CustomRender < Redcarpet::Render::HTML
   end
 end
 
-redcarpet_renderer = CustomRender.new(with_toc_data: true)
+renderer_opts = {
+  with_toc_data: true,
+  link_attributes: {
+    target: '_blank',
+    rel: 'nofollow'
+  }
+}
 
-redcarpet_markdown = Redcarpet::Markdown.new(redcarpet_renderer, extensions = {})
+redcarpet_renderer = CustomRender.new(renderer_opts)
+
+redcarpet_markdown = Redcarpet::Markdown.new(redcarpet_renderer)
 
 PAGES_PATH = 'app/views/pages/'
 MARKDOWNS_PATH = PAGES_PATH + 'markdowns/'
