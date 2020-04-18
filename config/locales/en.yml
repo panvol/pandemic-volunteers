@@ -39,17 +39,18 @@ en:
               invalid: "is not a valid email address."
             phone:
               invalid: "is not a valid phone number."
+  common:
+    consent: "By applying, you agree to our"
+    about: "About"
+    terms: "Terms and Conditions"
+    privacy: "Privacy Policy"
+    and: "and"
   layouts:
     application:
       brand: "Pandemic Volunteers"
       hospitals_nav_link: "Hospitals"
       partners_nav_link: "Partners"
       faq_nav_link: "FAQ"
-      footer:
-        text: "Pandemic Volunteers is an international humanitarian NGO in the works."
-        about: "About"
-        terms: "Terms and Conditions"
-        privacy: "Privacy Policy"
   home:
     index:
       hero:
@@ -112,8 +113,8 @@ en:
       header: "Does your hospital need help?"
       subheader: "Let us bring volunteers to your institution."
       form:
-        header: "Register your hospital"
-        cta: "Register"
+        header: "Apply for your hospital"
+        cta: "Apply"
         defaults:
           country: "Choose your country"
           hospital_name: "Hospital name"
@@ -127,8 +128,8 @@ en:
       header: "Let's work together."
       subheader: "Let us connect your organization with our volunteers."
       form:
-        header: "Register as a partner"
-        cta: "Register"
+        header: "Apply for your organization"
+        cta: "Apply"
         defaults:
           country: "Choose your country"
         errors:
