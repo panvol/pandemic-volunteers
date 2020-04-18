@@ -1,33 +1,6 @@
 /*
- * Globals
- */
-
-/* Links */
-a,
-a:focus,
-a:hover {
-}
-
-a .active {
-  color: blue !important;
-}
-
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  border: .05rem solid #fff;
-}
-
-
-/*
  * Base structure
  */
-
-html {
-  scroll-behavior: smooth;
-}
-
 html,
 body {
   height: 100%;
@@ -36,6 +9,7 @@ body {
 body {
   display: -ms-flexbox;
   display: flex;
+    scroll-behavior: smooth;
 }
 
 .cover-container {
@@ -118,9 +92,6 @@ body {
 /*
  * Footer
  */
-.mastfoot {
-}
-
 .cover-heading {
   font-size: 42pt;
 }

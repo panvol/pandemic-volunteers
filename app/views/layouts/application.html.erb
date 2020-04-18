@@ -76,19 +76,13 @@
                   <p class="w-100 m-auto mx-3 py-2">
                     <small>
                       <strong class="mr-4">
-                        <a class="text-dark" href="<%= about_path %>">
-                          <%=t(".footer.about") %>
-                        </a>
+                        <%= link_to t(".footer.about"), about_path, class: 'text-dark' %>
                       </strong>
                       <strong>
-                        <a class="text-dark" href="<%= terms_path %>">
-                          <%= t(".footer.terms") %>
-                        </a>
+                        <%= link_to t(".footer.terms"), terms_path, class: 'text-dark' %>
                       </strong>
                       <strong class="ml-4">
-                        <a class="text-dark" href="<%= privacy_path %>">
-                          <%= t(".footer.privacy") %>
-                        </a>
+                        <%= link_to t(".footer.privacy"), privacy_path, class: 'text-dark' %>
                       </strong>
                     </small>
                   </p>
