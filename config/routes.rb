@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   get '/hospitals', to: 'hospitals#index'
 
   get '/privacy', to: 'pages#privacy'
+  get '/terms', to: 'pages#terms'
 end
