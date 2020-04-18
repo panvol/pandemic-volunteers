@@ -1,16 +1,11 @@
-<div class="d-none d-md-block py-3">
-  <!-- Vertical spacing for md and larger screens -->
-  <br>
-</div>
-
-<div class="text-center container pt-5">
-  <p class="cover-heading font-weight-900">
-    <%= t(".hero.header.before_underline") %><span class="lives"><%= t(".hero.header.underline") %></span><%= t(".hero.header.after_underline") %>
+<div class="text-center container pb-5">
+  <p class="huge-title">
+    <%= t(".hero.header.before_underline") %><span class="red-bold-underline"><%= t(".hero.header.underline") %></span><%= t(".hero.header.after_underline") %>
   </p>
-  <p class="cover-lead">
+  <p class="subtitle">
     <%= t(".hero.text") %>
   </p>
-  <a role="button" class="btn btn-danger btn-lg px-4 mt-3 mb-5 shadow" href="#apply">
+  <a role="button" class="btn btn-danger btn-lg font-weight-bold shadow mt-3" style="padding: 0.75rem 1.5rem;" href="#apply">
     <%= t(".hero.cta") %>
   </a>
 </div>
@@ -36,7 +31,7 @@
 </div>
 
 <div class="text-center container pb-4">
-  <p class="cover-lead">
+  <p class="subtitle">
     <%= t(".intro.text") %>
   </p>
 </div>
@@ -51,22 +46,22 @@
 
 <div class="row mb-5 mx-0">
   <div class="col-md-6 offset-md-1">
-    <p class="cover-lead">
+    <p class="subtitle">
       <i class="fas fa-dot-circle mr-2"></i>
       <a class="red-link" href="#apply">
         <%= t(".steps.1") %>
         <i class="fas fa-arrow-right ml-2"></i>
       </a>
     </p>
-    <p class="cover-lead text-secondary">
+    <p class="subtitle text-secondary">
       <i class="fas fa-circle mr-2 text-secondary"></i>
       <%= t(".steps.2") %>
     </p>
-    <p class="cover-lead text-secondary">
+    <p class="subtitle text-secondary">
       <i class="fas fa-circle mr-2 text-secondary"></i>
       <%= t(".steps.3") %>
     </p>
-    <p class="cover-lead text-secondary">
+    <p class="subtitle text-secondary">
       <i class="fas fa-circle mr-2 text-secondary"></i>
       <%= t(".steps.4") %>
     </p>
@@ -138,7 +133,7 @@
   <div class="offset-md-2 col-md-8 px-0 pb-5">
     <div id="apply" class="card shadow">
       <div class="card-header d-flex align-items-center justify-content-between pb-0">
-        <div class="cover-lead font-weight-bold">
+        <div class="subtitle font-weight-bold">
           <p>
             <%= t(".form.header") %>
           </p>
@@ -158,11 +153,6 @@
       </div>
     </div>
   </div>
-</div>
-
-<div class="d-none d-md-block py-3">
-  <!-- Vertical spacing for md and larger screens -->
-  <br>
 </div>
 
 <%= javascript_pack_tag 'location_selector', 'data-turbolinks-track': 'reload', defer: true %>

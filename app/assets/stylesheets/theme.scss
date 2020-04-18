@@ -9,7 +9,6 @@ body {
 body {
   display: -ms-flexbox;
   display: flex;
-    scroll-behavior: smooth;
 }
 
 .cover-container {
@@ -34,15 +33,8 @@ body {
   border-bottom: .25rem solid transparent;
 }
 
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-}
-
 .nav-masthead .nav-link + .nav-link {
   margin-left: 1rem;
-}
-
-.nav-masthead .active {
 }
 
 @media (min-width: 48em) {
@@ -56,10 +48,6 @@ body {
 
 .link-no-underline, .link-no-underline:hover {
   text-decoration: none;
-}
-
-.link-black, .link-black:hover {
-  color: var(--dark);
 }
 
 .red-link {
@@ -79,35 +67,21 @@ body {
 
 
 /*
- * Cover
+ * Typography
  */
-.cover {
-}
-.cover .btn-lg {
-  padding: .75rem 1.25rem;
-  font-weight: 700;
-}
-
-
-/*
- * Footer
- */
-.cover-heading {
+.huge-title {
   font-size: 42pt;
+  font-weight: 900;
 }
 
 .section-title {
   font-size: 36pt;
 }
 
-.cover-lead {
+.subtitle {
   font-size: 20pt;
 }
 
-.font-weight-900 {
-  font-weight: 900;
-}
-
-.lives {
+.red-bold-underline {
   border-bottom: 5px solid rgb(220, 53, 69); box-shadow: rgb(220, 53, 69) 0px -22px 0px inset;
 }

@@ -1,4 +1,4 @@
-# About Pandemic Volunteers
+# About
 
 ##### Pandemic Volunteers is an international humanitarian NGO in the works.
 

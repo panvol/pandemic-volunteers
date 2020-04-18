@@ -3,7 +3,7 @@
 class CustomRender < Redcarpet::Render::HTML
   def postprocess(full_document)
     """
-    <div class='col-md-12'>
+    <div class=''>
       #{full_document}
     </div>
     """.html_safe
@@ -30,7 +30,7 @@ class CustomRender < Redcarpet::Render::HTML
   def header(text, header_level)
     if header_level == 1
       """
-      <div class='text-center container py-5'>
+      <div class='text-center container pb-5'>
         <p class='section-title font-weight-bold'>
           #{text}
         </p>
@@ -48,24 +48,6 @@ class CustomRender < Redcarpet::Render::HTML
       </h#{header_level}>
       """.html_safe
     end
-  end
-
-  def doc_header
-    """
-    <div class='d-none d-md-block py-3'>
-      <!-- Vertical spacing for md and larger screens -->
-      <br>
-    </div>
-    """.html_safe
-  end
-
-  def doc_footer
-    """
-    <div class='d-none d-md-block py-3'>
-      <!-- Vertical spacing for md and larger screens -->
-      <br>
-    </div>
-    """.html_safe
   end
 end
 
