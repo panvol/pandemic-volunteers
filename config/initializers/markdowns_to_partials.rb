@@ -1,6 +1,6 @@
 # Converts markdown files in $PAGES_PATH to partial files on server start
 
-class CustomRender < Redcarpet::Render::HTML
+class CustomHTMLRender < Redcarpet::Render::HTML
   def postprocess(full_document)
     """
     <div class=''>
@@ -49,17 +49,23 @@ class CustomRender < Redcarpet::Render::HTML
       """.html_safe
     end
   end
+
+  # Called on links that are specifically called out
+  def link(link, title, alt_text)
+    "<a #{"target='_blank'" if LinkHelper.external_link?(link)} href='#{link}'>#{alt_text}</a>"
+  end
+
+  # Called on URLs
+  def autolink(link, link_type)
+    "<a #{"target='_blank'" if LinkHelper.external_link?(link)} href='#{link}'>#{link}</a>"
+  end
 end
 
 renderer_opts = {
-  with_toc_data: true,
-  link_attributes: {
-    target: '_blank',
-    rel: 'nofollow'
-  }
+  with_toc_data: true
 }
 
-redcarpet_renderer = CustomRender.new(renderer_opts)
+redcarpet_renderer = CustomHTMLRender.new(renderer_opts)
 
 redcarpet_markdown = Redcarpet::Markdown.new(redcarpet_renderer)
 
