@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   get '/hospitals', to: 'hospitals#index'
 
+  get '/about', to: 'pages#about'
+  get '/terms', to: 'pages#terms'
   get '/privacy', to: 'pages#privacy'
 
   scope "(:locale)", locale: /en/ do
