@@ -13,18 +13,18 @@ class Api::HospitalsController < ApplicationController
       hospital = create_hospital(hospital_name, country, state, city)
     rescue => e
       flash.alert = '<i class="fas fa-exclamation-triangle mr-1"></i> ' + t("hospitals.index.form.messages.error")
-      redirect_to '/hospitals' and return
+      redirect_to hospitals_path and return
     end
 
     begin
       create_hospital_staff(contact_name, contact_email, hospital.id)
     rescue => e
       flash.alert = '<i class="fas fa-exclamation-triangle mr-1"></i> ' + t("hospitals.index.form.messages.error")
-      redirect_to '/hospitals' and return
+      redirect_to hospitals_path and return
     end
 
     flash.notice = '<i class="fas fa-heart mr-1"></i> ' + t("hospitals.index.form.messages.success")
-    redirect_to '/' and return
+    redirect_to root_path and return
   end
 
   def create_hospital(hospital_name, country, state, city)

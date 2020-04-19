@@ -15,7 +15,7 @@ class PartnersController < ApplicationController
 
     if partner.save
       flash.notice = '<i class="fas fa-heart mr-1"></i> ' + t("partners.index.form.messages.success")
-      redirect_to '/'
+      redirect_to root_path
     else
       flash.now.alert = '<i class="fas fa-exclamation-triangle mr-1"></i> ' + t("partners.index.form.messages.error")
 
