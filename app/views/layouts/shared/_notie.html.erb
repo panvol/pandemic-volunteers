@@ -1,8 +1,20 @@
 <%= javascript_pack_tag 'notie', 'data-turbolinks-track': 'reload', defer: true %>
 <%= stylesheet_pack_tag 'notie', 'data-turbolinks-track': 'reload', async: true %>
 
-<%= content_tag(:script) do %>
+<%= javascript_tag defer: true do %>
   <% flash.each do |type, message| %>
-    notie.alert({ type: '<%= notie_flash_class("#{type}") %>', text: '<%= message.html_safe %>', time: 5})
+    function flash(){
+      if(typeof notie !== "undefined"){
+        notie.alert({
+          type: '<%= notie_flash_class("#{type}") %>',
+          text: '<%= message.html_safe %>',
+          time: 5
+        })
+      }
+      else{
+        setTimeout(flash, 10)
+      }
+    }
+    flash()
   <% end %>
 <% end %>
