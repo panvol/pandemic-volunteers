@@ -7,10 +7,23 @@ class GuidelineCategory
     @title = metadata.title
     @description = metadata.description
     @svg_filename = metadata.svg_filename
-    @articles = []
+    @articles = get_articles
   end
 
   private
+
+  def get_articles
+    article_paths.map{|article_path|
+      {
+        slug: 'role-definition',
+        html: MarkdownHelper.to_card(article_path)
+      }
+    }
+  end
+
+  def article_paths
+    Dir.glob(dir_path + '/[0-9][0-9]-*.md')
+  end
 
   def extract_slug
     dir_path.match(/\d+-(\w.*)$/)[1]

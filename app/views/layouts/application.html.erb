@@ -27,30 +27,32 @@
         <div class="cover-container m-auto">
           <div class="inner center-block">
             <h3 class="nav masthead-brand justify-content-center">
-              <a href="/" class="nav-link text-dark link-no-underline <%= 'active' if current_page?(controller: 'home') %>">
+              <%= link_to root_path, class: "nav-link text-dark link-no-underline #{'active' if current_page?(controller: 'home')}" do %>
                 <%= inline_svg_tag "logo/logo.svg", size: '1.2em', class: 'mb-2' %>
                 <%= t(".brand") %>
-              </a>
+              <% end %>
             </h3>
             <nav class="nav nav-masthead pt-2 justify-content-center">
-              <a class="nav-link red-link mr-3 <%= 'active' if current_page?(controller: 'hospitals') %>" href="/hospitals">
+              <%= link_to hospitals_path, class: "nav-link red-link mr-3 #{'active' if current_page?(controller: 'hospitals')}" do %>
                 <%= t(".hospitals_nav_link") %>
-              </a>
-              <a class="nav-link red-link mx-3 <%= 'active' if current_page?(controller: 'partners') %>" href="/partners">
+              <% end %>
+              <%= link_to partners_path, class: "nav-link red-link mx-3 #{'active' if current_page?(controller: 'partners')}" do %>
                 <%= t(".partners_nav_link") %>
-              </a>
-              <a class="nav-link red-link ml-3" href="https://www.notion.so/Pandemic-Volunteers-cf5a155708614c3fa77f00d93bdd02a1" target="_blank">
-                <%= t(".faq_nav_link") %>
-                </a>
+              <% end %>
+              <%= link_to guidelines_path, class: "nav-link red-link ml-3 #{'active' if ['guidelines', 'guideline_categories', 'guideline_articles'].include? controller_name}" do %>
+                <%= t(".guidelines_nav_link") %>
+              <% end %>
             </nav>
           </div>
         </div>
       </header>
 
-      <div class="d-none d-md-block py-5">
-        <!-- Vertical spacing for md and larger screens -->
-        <br>
-      </div>
+      <% if !['guidelines', 'guideline_categories', 'guideline_articles'].include? controller_name  %>
+        <div class="d-none d-md-block py-5">
+          <!-- Vertical spacing for md and larger screens -->
+          <br>
+        </div>
+      <% end %>
 
       <main role="main" class="inner">
         <div class="cover-container d-flex w-100 h-100 mx-auto flex-column">

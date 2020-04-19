@@ -1,9 +1,14 @@
 class GuidelineCategoriesController < ApplicationController
   def index
-    @category = nil
-  end
-
-  def fetch_categories
-    GuidelinesPresenter.new(locale).categories
+    category = params[:category]
+    dir_path =  Guidelines::UtilsHelper.category_path(category)
+    if dir_path
+      @category = GuidelineCategory.new(
+          dir_path.to_s,
+          GuidelinesMetadataExtractor.new(dir_path),
+        )
+    else
+      not_found
+    end
   end
 end

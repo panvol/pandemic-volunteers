@@ -50,6 +50,7 @@ en:
       brand: "Pandemic Volunteers"
       hospitals_nav_link: "Hospitals"
       partners_nav_link: "Partners"
+      guidelines_nav_link: "Guidelines"
       faq_nav_link: "FAQ"
   home:
     index:

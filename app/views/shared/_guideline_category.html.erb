@@ -1,0 +1,13 @@
+<%= render partial: "shared/guideline_list_header", locals: {
+  title: title,
+  description: description,
+  svg_filename: svg_filename,
+} %>
+
+<% articles.each do |article| %>
+  <%= render partial: "shared/guideline_article_card", locals: {
+    category_slug: slug,
+    article_slug: article[:slug],
+    html: article[:html]
+  } %>
+<% end %>

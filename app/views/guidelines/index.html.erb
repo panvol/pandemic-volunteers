@@ -1,5 +1,10 @@
+<div class="container">
+  <p> &nbsp; </p>
+</div>
+
 <%= render partial: "shared/guideline_index", locals: {
   title: @guidelines.title,
   description: @guidelines.description,
-  children: @guidelines.categories,
+  svg_filename: @guidelines.svg_filename,
+  children: @guidelines.categories
 } %>

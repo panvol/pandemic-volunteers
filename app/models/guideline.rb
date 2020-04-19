@@ -1,13 +1,14 @@
 class Guideline
   ROOT_PATH = Rails.root.join("lib/markdown").freeze
 
-  attr_reader :title, :description
+  attr_reader :title, :description, :svg_filename
 
   def initialize(locale)
     @locale = locale
     @metadata = GuidelinesMetadataExtractor.new(guidelines_path)
     @title = metadata.title
     @description = metadata.description
+    @svg_filename = metadata.svg_filename
   end
 
   def categories
@@ -24,6 +25,12 @@ class Guideline
   def guideline_dir_paths
     Pathname.new(guidelines_path).children.select(&:directory?)
   end
+
+  # def categories
+  #   Pathname.new(guidelines_path).children.select(&:directory?).map {|path|
+  #     path.basename.to_s[3..-1]
+  #   }
+  # end
 
   def guidelines_path
     root_path("guidelines")

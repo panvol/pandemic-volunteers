@@ -1,16 +1,14 @@
-<div class="text-center container py-5">
-  <p class="section-title font-weight-bold">
-    <%= title %>
-  </p>
-  <p class="cover-lead">
-    <%= description %>
-  </p>
-  <% children.each do |child| %>
-    <%= render partial: "shared/guideline_card", locals: {
-      title: child.title,
-      description: child.description,
-      slug: child.slug,
-      svg_filename: child.svg_filename,
-    } %>
-  <% end %>
-</div>
+<%= render partial: "shared/guideline_list_header", locals: {
+  title: title,
+  description: description,
+  svg_filename: svg_filename,
+} %>
+
+<% children.each do |child| %>
+  <%= render partial: "shared/guideline_category_card", locals: {
+    title: child.title,
+    description: child.description,
+    category_slug: child.slug,
+    svg_filename: child.svg_filename,
+  } %>
+<% end %>

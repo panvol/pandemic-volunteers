@@ -1,5 +1,11 @@
-<%= render partial: "shared/guideline_index", locals: {
+<div class="container">
+  <p> breadcrumbs / breadcrumbs </p>
+</div>
+
+<%= render partial: "shared/guideline_category", locals: {
+  slug: @category.slug,
   title: @category.title,
   description: @category.description,
-  children: @categories.articles,
+  svg_filename: @category.svg_filename,
+  articles: @category.articles,
 } %>

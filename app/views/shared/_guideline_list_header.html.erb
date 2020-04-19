@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row mb-4">
+    <div class="col-md-4 d-flex">
+      <%= inline_svg_tag "graphics/home/#{svg_filename}.svg",
+        size: "200",
+        class: "m-auto"
+      %>
+    </div>
+    <div class="col-md-8 my-auto">
+      <p class="section-title font-weight-bold">
+        <%= title %>
+      </p>
+      <blockquote class='blockquote font-weight-bold'>
+        <%= description %>
+      </blockquote>
+    </div>
+  </div>
+</div>
