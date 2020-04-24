@@ -1,14 +1,19 @@
 <%= render partial: "shared/guideline_list_header", locals: {
+
   title: title,
   description: description,
   svg_filename: svg_filename,
 } %>
 
 <% children.each do |child| %>
-  <%= render partial: "shared/guideline_category_card", locals: {
-    title: child.title,
-    description: child.description,
-    category_slug: child.slug,
-    svg_filename: child.svg_filename,
-  } %>
+  <% if child.is_a?(Hash) %>
+    <% if child[:id] != "metadata.yml" %>
+      <%= render partial: "shared/guideline_category_card", locals: {
+        title: child[:title],
+        description: child[:description],
+        category_slug: child[:slug],
+        svg_filename: child[:svg_filename],
+      } %>
+    <% end %>
+  <% end %>
 <% end %>

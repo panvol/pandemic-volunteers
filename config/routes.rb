@@ -20,7 +20,9 @@ Rails.application.routes.draw do
     get '/privacy', to: 'pages#privacy'
 
     get "/guidelines", to: "guidelines#index"
-    get "/guidelines/:category", to: "guideline_categories#index", as: "guideline_category"
-    get "/guidelines/:category/:article", to: "guideline_articles#index", as: "guideline_article"
+    get "/guidelines/:category_slug", to: "guidelines#index", as: "guideline_category"
+    get "/guidelines/:category_slug/:article_slug", to: "guidelines#index", as: "guideline_article"
+    # get "/guidelines/:category", to: "guideline_categories#index", as: "guideline_category"
+    # get "/guidelines/:category/:article", to: "guideline_articles#index", as: "guideline_article"
   end
 end
