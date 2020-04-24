@@ -1,11 +1,43 @@
-<div class="container">
-  <p> &nbsp; </p>
-</div>
-<%= params %>
 
-<%= render partial: "shared/guideline_index", locals: {
-  title: @data[:title],
-  description: @data[:description],
-  svg_filename: @data[:svg_filename],
-  children: @data.values
-} %>
+<div class="container">
+  <p>
+  <%= link_to("Guidelines", guidelines_path) %>
+  /
+  <%= @categories ? link_to(@categories[:title], guideline_category_path(@categories[:slug])) : nil %>
+  /
+  <%= @article ? link_to(
+    @article[:title],
+    guideline_article_path(
+      @categories[:slug],
+      @article[:slug])
+  ) : nil %>
+  </p>
+</div>
+
+<% if @guidelines.present? %>
+  Guidelines
+  <% @guidelines.values.each do |val| %>
+    <% if val.is_a?(Hash) && val[:id] != GuidelinesHelper::METADATA_FILE_NAME %>
+      <%= link_to val[:title], guideline_category_path(val[:slug]) %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<% if @categories.present? %>
+  <p>Category</p>
+  <% category_slug = @categories[:slug] %>
+  <% @categories.values.each do |val| %>
+    <% if val.is_a?(Hash) && val[:id] != GuidelinesHelper::METADATA_FILE_NAME %>
+      <%= link_to val[:title], guideline_article_path(category_slug, val[:slug]) %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<% if @article.present? %>
+  <p>Article</p>
+  <% category_slug = @categories[:slug] %>
+  <% article_slug = @article[:slug] %>
+  <%= render html: MarkdownHelper.to_html(
+    File.open(Rails.root.join("lib/markdown", @article[:full_path]))
+  ) %>
+<% end %>
