@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.feature "A partner", :js do
   scenario "can see errors registering" do
     existing_staff = FactoryBot.create(:partner_staff, email: "existing@partner.com")
-    visit "/partners/new"
+    visit "/partners"
 
     select "United States", from: "partner_country"
     select "Michigan", from: "partner_state"
@@ -16,16 +16,16 @@ RSpec.feature "A partner", :js do
     fill_in "partner_staff_email", with: "existing@partner.com"
     fill_in "partner_staff_about", with: "I am a software engineer"
 
-    click_button "Register"
+    click_button "Apply"
 
-    expect(page).to have_content("Could not be saved.")
+    expect(page).to have_content("Could not be saved!")
     expect(page).to have_content("Email has already been taken")
     expect(Partner.count).to eq(1)
     expect(PartnerStaff.count).to eq(1)
   end
 
   scenario "can register with the site" do
-    visit "/partners/new"
+    visit "/partners"
 
     select "United States", from: "partner_country"
     select "Michigan", from: "partner_state"
@@ -38,9 +38,9 @@ RSpec.feature "A partner", :js do
     fill_in "partner_staff_email", with: "new@partner.com"
     fill_in "partner_staff_about", with: "I am a software engineer"
 
-    click_button "Register"
+    click_button "Apply"
 
-    expect(page).to have_content("Thanks! We will contact you soon.")
+    expect(page).to have_content("Thank you — we will contact you in 48 hours!")
 
     expect(Partner.count).to eq(1)
     expect(PartnerStaff.count).to eq(1)
