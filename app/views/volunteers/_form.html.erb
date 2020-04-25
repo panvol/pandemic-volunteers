@@ -1,5 +1,6 @@
 <%= simple_form_for volunteer, url: '/#apply', method: :post do |f| %>
   <%= f.input :country,
+    as: :select,
     label: false,
     collection: countries,
     :selected => 'US'
