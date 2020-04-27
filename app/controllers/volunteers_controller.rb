@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class VolunteersController < ApplicationController
   def create
     @volunteer = Volunteer.new(volunteer_params)
@@ -7,11 +9,12 @@ class VolunteersController < ApplicationController
 
     if @volunteer.save
       VolunteerNotifierMailer.send_registration_email(@volunteer).deliver_later
-      flash.notice = '<i class="fas fa-heart mr-1"></i> ' + t("volunteers.form.messages.success")
-      redirect_to root_path and return
+      flash.notice = '<i class="fas fa-heart mr-1"></i> ' + t('volunteers.form.messages.success')
+      redirect_to(root_path) && return
     else
-      flash.now.alert = '<i class="fas fa-exclamation-triangle mr-1"></i> ' + t("volunteers.form.messages.error")
-      render :template => 'home/index' and return
+      flash.now.alert = '<i class="fas fa-exclamation-triangle mr-1"></i> ' +
+                        t('volunteers.form.messages.error')
+      render(template: 'home/index') && return
     end
   end
 

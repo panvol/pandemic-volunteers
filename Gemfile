@@ -40,6 +40,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-byebug'
   gem 'pry-rails'
+  # A Ruby static code analyzer and formatter, based on the community Ruby style guide.
+  gem 'rubocop', '~> 0.82.0', require: false
 end
 
 group :development do

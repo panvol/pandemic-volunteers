@@ -1,21 +1,23 @@
-require "rails_helper"
+# frozen_string_literal: true
+
+require 'rails_helper'
 
 RSpec.describe Volunteer, type: :model do
-  it "validates email" do
-    volunteer = FactoryBot.build(:volunteer, email: "bademail")
+  it 'validates email' do
+    volunteer = FactoryBot.build(:volunteer, email: 'bademail')
     expect(volunteer.valid?).to eq(false)
 
-    expect(volunteer.errors[:email][0]).to eq("is not a valid email address.")
+    expect(volunteer.errors[:email][0]).to eq('is not a valid email address.')
   end
 
-  it "validates phone" do
-    volunteer = FactoryBot.build(:volunteer, phone: "bad")
+  it 'validates phone' do
+    volunteer = FactoryBot.build(:volunteer, phone: 'bad')
     expect(volunteer.valid?).to eq(false)
 
-    expect(volunteer.errors[:phone][0]).to eq("is not a valid phone number.")
+    expect(volunteer.errors[:phone][0]).to eq('is not a valid phone number.')
   end
 
-  it "requires email, phone, name, and about" do
+  it 'requires email, phone, name, and about' do
     volunteer = Volunteer.new
     expect(volunteer.valid?).to eq(false)
 

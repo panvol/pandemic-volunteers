@@ -1,0 +1,44 @@
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'node_modules/**/*'
+    - 'spec/rails_helper.rb'
+    - 'spec/spec_helper.rb'
+    - 'Gemfile'
+    - 'Rakefile'
+Layout/LineLength:
+  Max: 100
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+Lint/RaiseException:
+  Enabled: true
+Lint/StructNewOverride:
+  Enabled: true
+Metrics/AbcSize:
+  Max: 25
+Metrics/BlockLength:
+  ExcludedMethods: ['describe', 'feature']
+Metrics/CyclomaticComplexity:
+  Max: 8
+Metrics/MethodLength:
+  Max: 15
+Metrics/PerceivedComplexity:
+  Max: 9
+Naming/VariableNumber:
+  EnforcedStyle: snake_case
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/ExponentialNotation:
+  Enabled: true
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Description: 'Prefer `transform_keys` over `each_with_object` and `map`.'
+  Enabled: true
+Style/HashTransformValues:
+  Description: 'Prefer `transform_values` over `each_with_object` and `map`.'
+  Enabled: true
