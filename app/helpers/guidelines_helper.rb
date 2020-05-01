@@ -11,16 +11,19 @@ module GuidelinesHelper
       full_path = entry.gsub(DEFAULT_PATH, "")
 
       metadata = parse_metadata(entry)
+      id = entry.split("/").last
 
       # rubocop:disable Layout/LineLength
       {
-        id: entry.split("/").last,
+        id: id,
         full_path: full_path,
         title: metadata&.dig("title") || generate_title(entry),
         description: metadata&.dig("description") || generate_description(entry),
         svg_filename: metadata&.dig("svg_filename"),
         position: generate_position(entry),
         slug: generate_slug(entry, metadata),
+        is_metadata: id == METADATA_FILE_NAME,
+        html: File.open(Rails.root.join("lib/markdown", full_path)),
       }
       # rubocop:enable Layout/LineLength
     end

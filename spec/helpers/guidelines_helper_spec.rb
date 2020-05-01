@@ -34,7 +34,7 @@ RSpec.describe GuidelinesHelper do
         "Bar baz fizz",
       )
     end
-    context "when entrty is a markdown file" do
+    context "when entry is a markdown file" do
       it "uses header 1 as the title" do
         markdown = <<~MARKDOWN
           # Foo Bar

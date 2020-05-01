@@ -3,11 +3,13 @@
   description: description,
   svg_filename: svg_filename,
 } %>
-
 <% articles.each do |article| %>
   <%= render partial: "shared/guideline_article_card", locals: {
     category_slug: slug,
     article_slug: article[:slug],
+    title: article[:title],
+    description: article[:description],
+    svg_filename: article[:svg_filename],
     html: article[:html]
   } %>
 <% end %>

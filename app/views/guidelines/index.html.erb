@@ -1,11 +1,9 @@
 <div class="container">
   <p>
   <%= link_to("Guidelines", guidelines_path) %>
-  /
-  <%= @category ? link_to(@category[:title], guideline_category_path(@category[:slug])) : nil %>
-  /
+  <%= @category ? link_to(" / #{@category[:title]}", guideline_category_path(@category[:slug])) : nil %>
   <%= @article ? link_to(
-    @article[:title],
+    " / #{ @article[:title]}",
     guideline_article_path(
       @category[:slug],
       @article[:slug])
@@ -13,30 +11,25 @@
   </p>
 </div>
 
-<% if @guidelines.present? %>
-  Guidelines
-  <% @guidelines.values.each do |val| %>
-    <% if val.is_a?(Hash) && val[:id] != GuidelinesHelper::METADATA_FILE_NAME %>
-      <%= link_to val[:title], guideline_category_path(val[:slug]) %>
-    <% end %>
-  <% end %>
-<% end %>
-
-<% if @category.present? %>
-  <p>Category</p>
-  <% category_slug = @category[:slug] %>
-  <% @category.values.each do |val| %>
-    <% if val.is_a?(Hash) && val[:id] != GuidelinesHelper::METADATA_FILE_NAME %>
-      <%= link_to val[:title], guideline_article_path(category_slug, val[:slug]) %>
-    <% end %>
-  <% end %>
-<% end %>
-
 <% if @article.present? %>
-  <p>Article</p>
-  <% category_slug = @category[:slug] %>
-  <% article_slug = @article[:slug] %>
-  <%= render html: MarkdownHelper.to_html(
-    File.open(Rails.root.join("lib/markdown", @article[:full_path]))
-  ) %>
+   <%= render html: MarkdownHelper.to_html(@article[:html]) %>
+<% elsif @category.present? %>
+  <%= render partial: "shared/guideline_category", locals: {
+    slug: @category[:slug],
+    title: @category[:title],
+    description: @category[:description],
+    svg_filename: @category[:svg_filename],
+    articles: @category.values.select do |value|
+      value.is_a?(Hash) && !value[:is_metadata]
+    end
+  } %>
+<% elsif @guidelines.present? %>
+  <%= render partial: "shared/guideline_index", locals: {
+    title: @guidelines[:title],
+    description: @guidelines[:description],
+    svg_filename: @guidelines[:svg_filename],
+    children: @guidelines.values.select do |value|
+      value.is_a?(Hash) && !value[:is_metadata]
+    end
+  }%>
 <% end %>

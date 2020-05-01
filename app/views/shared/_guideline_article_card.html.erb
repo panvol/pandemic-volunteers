@@ -1,3 +1,23 @@
 <%= link_to guideline_article_path(category_slug, article_slug), class: "text-dark link-no-underline" do %>
-  <%= html %>
+  <div class="container">
+    <div class="card">
+      <div class="card-body bg-light">
+        <div class="row">
+          <div class="col-md-2 d-flex">
+            <%= inline_svg_tag "graphics/home/#{svg_filename}.svg",
+              class: "m-auto"
+            %>
+          </div>
+          <div class="col-md-10 my-auto">
+            <h1 class="mt-2">
+              <%= title %>
+            </h1>
+            <blockquote class='blockquote'>
+              <%= description %>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 <% end %>
