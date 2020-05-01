@@ -6,7 +6,7 @@ module GuidelinesHelper
   DEFAULT_MARKDOWN_PATH = "lib/markdown/en".freeze
   METADATA_FILE_NAME = "metadata.yml".freeze
 
-  def self.formatted_entries
+  def self.build_nodes
     Dir[Rails.root.join("lib/markdown/**/*")].map do |entry|
       full_path = entry.gsub(DEFAULT_PATH, "")
 
@@ -20,14 +20,13 @@ module GuidelinesHelper
         description: metadata&.dig("description") || generate_description(entry),
         svg_filename: metadata&.dig("svg_filename"),
         position: generate_position(entry),
-        slug: generate_slug(entry),
+        slug: generate_slug(entry, metadata),
       }
       # rubocop:enable Layout/LineLength
     end
   end
 
-  def self.generate_slug(entry)
-    metadata = parse_metadata(entry)
+  def self.generate_slug(entry, metadata)
     title = metadata&.dig("title") || generate_title(entry)
     title.parameterize
   end
@@ -73,8 +72,8 @@ module GuidelinesHelper
     description
   end
 
-  def self.build_tree_from_options(options)
-    key_groups = options.map do |opt_group|
+  def self.build_tree_from_nodes(nodes = build_nodes)
+    key_groups = nodes.map do |opt_group|
       {
         node: opt_group,
         path: opt_group[:full_path].split("/"),

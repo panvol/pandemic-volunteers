@@ -1,19 +1,14 @@
 class GuidelinesController < ApplicationController
   def index
     @guidelines = guidelines
-    @categories = category_guidelines
+    @category = category_guidelines
     @article = category_article
-
   end
 
   private
 
-  def rows
-    @rows ||= GuidelinesHelper.formatted_entries
-  end
-
   def helper
-    @helper ||= GuidelinesHelper.build_tree_from_options(rows)
+    @helper ||= GuidelinesHelper.build_tree_from_nodes
   end
 
   def guidelines
