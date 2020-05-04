@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Api::HospitalsController < ApplicationController
+  # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
   def create
     # TODO: Handle nil values for location attributes
     country_code = params[:country]
@@ -30,6 +31,7 @@ class Api::HospitalsController < ApplicationController
     flash.notice = '<i class="fas fa-heart mr-1"></i> ' + t('hospitals.index.form.messages.success')
     redirect_to(root_path) && return
   end
+  # rubocop:enable Metrics/AbcSize, Metrics/MethodLength
 
   def create_hospital(hospital_name, country, state, city)
     Hospital.create!(
