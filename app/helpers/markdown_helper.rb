@@ -115,7 +115,10 @@ module MarkdownHelper
   REDCARPET_MARKDOWN = Redcarpet::Markdown.new(REDCARPET_MARKDOWN_HTML_RENDERER)
   def self.to_html(markdown_file_path)
     markdown_content = File.read(markdown_file_path)
-    REDCARPET_MARKDOWN.render(markdown_content)
+    cache_key = Digest::MD5.hexdigest(markdown_content)
+    Rails.cache.fetch cache_key do
+      REDCARPET_MARKDOWN.render(markdown_content)
+    end
   end
 
   REDCARPET_ARTICLE_CARD_HTML_RENDERER = ArticleCardHTMLRender.new()
