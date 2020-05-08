@@ -23,7 +23,7 @@ module GuidelinesHelper
         position: generate_position(entry),
         slug: generate_slug(entry, metadata),
         is_metadata: id == METADATA_FILE_NAME,
-        html: File.open(Rails.root.join("lib/markdown", full_path)),
+        md_path: File.open(Rails.root.join("lib/markdown", full_path)),
       }
       # rubocop:enable Layout/LineLength
     end

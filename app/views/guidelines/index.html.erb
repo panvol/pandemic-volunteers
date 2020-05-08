@@ -12,7 +12,7 @@
 </div>
 
 <% if @article.present? %>
-   <%= render html: MarkdownHelper.to_html(@article[:html]) %>
+   <%= render html: MarkdownHelper.to_html(@article[:md_path]) %>
 <% elsif @category.present? %>
   <%= render partial: "shared/guideline_category", locals: {
     slug: @category[:slug],

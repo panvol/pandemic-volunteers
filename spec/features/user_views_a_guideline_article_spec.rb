@@ -22,7 +22,7 @@ RSpec.describe "A user" do
 
     click_on(article[:title])
 
-    expect(page.html).to include(MarkdownHelper.to_html(article[:html]))
+    expect(page.html).to include(MarkdownHelper.to_html(article[:md_path]))
   end
 
   private
