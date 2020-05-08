@@ -1,5 +1,5 @@
 <div class="container">
-  <p>
+  <p class="breadcrumbs">
   <%= link_to("Guidelines", guidelines_path) %>
   <%= @category ? link_to(" / #{@category[:title]}", guideline_category_path(@category[:slug])) : nil %>
   <%= @article ? link_to(
