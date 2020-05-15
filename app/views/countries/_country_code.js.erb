@@ -1,0 +1,5 @@
+var phoneInput = document.getElementsByName("volunteer[phone]")[0]
+var countryCode = "+#{ISO3166::Country.find_country_by_alpha2(e.target.value)}"
+phoneInput.value = "+" + <%= country_code %>
+
+

@@ -30,6 +30,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'city-state', '>= 0.1.0'
 gem 'country_state_select', '>= 3.0.5'
+gem 'countries'
 gem 'simple_form', '>= 5.0.2'
 gem 'bootstrap', '~>4.3.1'
 gem 'inline_svg', '>= 1.7.1'

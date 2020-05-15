@@ -17,4 +17,6 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#about'
   get '/terms', to: 'pages#terms'
   get '/privacy', to: 'pages#privacy'
+
+  get'/country-code', to: "countries#show"
 end

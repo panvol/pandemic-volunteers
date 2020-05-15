@@ -2,7 +2,14 @@
   <%= f.input :country,
     label: false,
     collection: countries,
-    :selected => 'US'
+    :selected => 'US',
+    input_html: {
+      data: {
+        country_code: "true",
+        remote: :true,
+        url: "/country-code",
+      }
+    }
   %>
 
   <%= f.input :state,
