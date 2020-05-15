@@ -65,7 +65,7 @@ en:
           before_bold: ""
           bold: "Pandemic Volunteers"
           after_bold: "is a global network of local volunteering crews"
-        text: "Help your neighbor better with guidelines, more team members and backing of local coordination crews."
+        text: "Help your community more effectively and efficiently by partnering with neighborhood volunteers backed by local coordination crews following well-defined guidelines."
       mobile_badge: "mobile"
       remote_badge: "remote"
       coming_soon_badge: "coming soon"
@@ -92,7 +92,7 @@ en:
         1: "Apply for volunteering"
         2: "Introductory call"
         3: "Read the given guidelines"
-        4: "Start volunteering" 
+        4: "Start volunteering"
       form:
         header: "Apply for volunteering"
   volunteers:
