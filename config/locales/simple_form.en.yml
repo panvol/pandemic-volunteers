@@ -19,7 +19,6 @@ en:
         name: 'Full name'
         email: 'Email address'
         phone: 'Phone number'
-        immunity: 'Do you have immunity against SARS-CoV-2?'
         about: 'About you'
     placeholders:
       defaults:

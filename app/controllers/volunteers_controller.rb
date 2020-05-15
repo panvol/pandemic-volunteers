@@ -25,7 +25,6 @@ class VolunteersController < ApplicationController
       :name,
       :email,
       :phone,
-      :immunity,
       :about,
       :crew
     )
