@@ -10,8 +10,8 @@ RSpec.describe "laytous/application" do
     expect(rendered).to match t("layouts.application.faq_nav_link")
     # Footer is temporarily looking for contributors
     # expect(rendered).to match t("layouts.application.footer.text")
-    expect(rendered).to match t("common.about")
-    expect(rendered).to match t("common.terms")
-    expect(rendered).to match t("common.privacy")
+    expect(rendered).to match t("layouts.application.footer.about")
+    expect(rendered).to match t("layouts.application.footer.terms")
+    expect(rendered).to match t("layouts.application.footer.privacy")
   end
 end
