@@ -72,12 +72,6 @@
     }
   %>
 
-  <%= f.input :immunity,
-    as: :radio_buttons,
-    :collection => [ ['Yes', true], ['No', false] ],
-    :checked => ['No', false]
-  %>
-
   <%= f.button :submit,
     t(".cta"),
     id: 'volunteer_submit',
