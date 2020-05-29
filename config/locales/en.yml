@@ -89,12 +89,12 @@ en:
         roles: "Available roles"
         form: "Join the fight now!"
       steps:
-        1: "Apply for volunteering"
+        1: "Apply to be a volunteer"
         2: "Introductory call"
         3: "Read the given guidelines"
         4: "Start volunteering"
       form:
-        header: "Apply for volunteering"
+        header: "Apply to be a volunteer"
   volunteers:
     form:
       defaults:
