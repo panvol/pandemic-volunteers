@@ -22,7 +22,7 @@ class PartnersController < ApplicationController
       @countries_collection = CS.countries.map { |c| [I18n.transliterate(c[1]), c[0]] }
       @countries_collection.delete(["country_name", :COUNTRY_ISO_CODE])
       @countries_collection = @countries_collection.sort_by {|c| c[0]}
-      render :new, locals: { partner: partner, partner_staff: partner_staff }
+      render :index, locals: { partner: partner, partner_staff: partner_staff }
     end
   end
 
